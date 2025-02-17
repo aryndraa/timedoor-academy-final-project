@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       >
         <Header/>
 
-        <main className="flex flex-col  mx-5 text-white">
+        <main className="flex flex-col  mx-5 text-text-200">
           {children}
         </main>
       </body>
