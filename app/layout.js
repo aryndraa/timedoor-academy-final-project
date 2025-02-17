@@ -1,5 +1,6 @@
 import { Poppins } from "next/font/google";
 import "@/app/_styles/globals.css";
+import { Header } from "./components/Header";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,9 +21,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} antialiased overflow-hidden bg-dark-300 flex flex-col max-w-7xl mx-5 text-white`}
+        className={`${poppins.className} antialiased overflow-hidden bg-dark-300 `}
       >
-        {children}
+        <Header/>
+
+        <main className="flex flex-col  mx-5 text-white">
+          {children}
+        </main>
       </body>
     </html>
   );
