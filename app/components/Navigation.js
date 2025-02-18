@@ -24,7 +24,7 @@ export const Navigation = () => {
 
   return (
     <nav >
-      <ul className="flex gap-6">
+      <ul className="flex gap-8">
         {links.map((link, key) => (
           <li key={key}>
             <NavLink name={link.name} path={link.path}/>
