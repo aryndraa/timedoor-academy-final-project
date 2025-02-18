@@ -8,6 +8,10 @@ export const Navigation = () => {
       path: "/"
     },
     {
+      name: "My Ticket",
+      path: "/my-tickets"
+    },
+    {
       name: "Movies",
       path: "/movies"
     },
@@ -15,15 +19,12 @@ export const Navigation = () => {
       name: "Cinema",
       path: "/cinemas"
     },
-    {
-      name: "My Ticket",
-      path: "/my-tickets"
-    },
+    
   ]
 
   return (
-    <nav className="py-6 border-y border-dark-100 px-3 lg:px-20">
-      <ul className="flex gap-4">
+    <nav >
+      <ul className="flex gap-6">
         {links.map((link, key) => (
           <li key={key}>
             <NavLink name={link.name} path={link.path}/>
