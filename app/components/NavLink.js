@@ -8,7 +8,7 @@ export const NavLink = ({path, name, icon}) => {
     <Link href={path} className={` text-[10px] lg:text-base font-semibold lg:font-medium flex flex-col gap-1 items-center ${
       pathname === path ? "text-primary" : "text-text-100"
     }`}>
-      <span className="lg:hidden text-3xl">{icon}</span>
+      <span className="lg:hidden text-2xl">{icon}</span>
       {name}
     </Link>
   );
