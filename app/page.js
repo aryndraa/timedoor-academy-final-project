@@ -12,7 +12,7 @@ export default function Home() {
           </h1>
           <p className="text-sm lg:text-lg">Search Movie, Cinema, City....</p>
         </div>
-        <div>
+        <div className="w-full">
           <DiscoverMovieForm/>
         </div>
       </section>
