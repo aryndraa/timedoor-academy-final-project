@@ -1,6 +1,7 @@
 import { Poppins } from "next/font/google";
 import "@/app/_styles/globals.css";
 import { Header } from "./components/Header";
+import {BottomBar} from "@/app/components/BottomBar";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -28,6 +29,8 @@ export default function RootLayout({ children }) {
         <main className="flex flex-col  mx-5 text-text-200 lg:max-w-7xl lg:mx-auto">
           {children}
         </main>
+
+        <BottomBar/>
       </body>
     </html>
   );
