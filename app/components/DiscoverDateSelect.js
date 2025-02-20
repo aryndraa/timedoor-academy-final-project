@@ -57,7 +57,7 @@ export const DiscoverDateSelect = () => {
               modifiersStyles={ modifiersStyles }
             />
             <button
-              className="mt-4 px-4 py-2 bg-white/20 text-white rounded-lg w-full"
+              className="mt-8 px-4 py-2 bg-white/20 text-white rounded-lg w-full"
               onClick={() => setIsOpen(false)}
             >
               Close

@@ -35,7 +35,7 @@ export const DiscoverLocationSelect = () => {
       <div className="flex justify-between items-center w-full bg-dark-100 px-4 py-3 rounded-lg" onClick={() => setIsModalOpen(true)}>
         <div>
           <p className="text-white/40 text-sm lg:text-base font-medium capitalize">Location</p>
-          <strong className="text-sm lg:text-lg font-medium text-white capitalize">
+          <strong className="text-sm lg:text-lg font-semibold text-white capitalize">
             {selectedCountry && selectedLocation ? `${selectedCountry}, ${selectedLocation}` : "Select Location"}
           </strong>
         </div>
