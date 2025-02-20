@@ -29,3 +29,9 @@ body {
 .rdp-month_grid {
   min-width: 30rem !important;
 }
+
+@media (max-width: 768px) {
+  .rdp-month_grid {
+    min-width:100%!important;
+  }
+}
