@@ -26,14 +26,14 @@ export const DiscoverSelect = ({ name, defaultValue, icon = null, data = [] }) =
       </div>
       {isOpen && (
         <div className="min-h-screen bg-dark-300/60 absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
-          <div className="bg-dark-200 min-w-[40%] p-6 rounded-lg relative">
+          <div className="bg-dark-200 min-w-[92%] lg:min-w-[40%] p-6 rounded-lg relative">
             <h2 className="text-xl font-medium pb-4 mb-4 border-border border-b-2">Select {name}</h2>
             <ul className="space-y-2">
               {data.map((item) => (
                 <li key={item}>
                   <button
                     className={`w-full text-left px-4 py-2 rounded-lg text-white ${
-                      selectedValue === item ? "bg-blue-500" : "bg-dark-100"
+                      selectedValue === item ? "bg-primary" : "bg-dark-100"
                     }`}
                     onClick={() => {
                       setSelectedValue(item);
