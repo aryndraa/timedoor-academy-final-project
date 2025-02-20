@@ -4,3 +4,28 @@
 
 body {
 }
+.rdp-root {
+  --rdp-accent-color: red; /* Use blue as the accent color. */
+}
+
+[data-theme="dark"] .rdp-root {
+  --rdp-accent-color: yellow; /* Use yellow as the accent color in dark mode. */
+}
+
+.rdp-today:not(.rdp-outside) {
+  color: #EABB40 !important;
+}
+
+.rdp-selected .rdp-day_button {
+  border-color: #EABB40 !important;
+  background-color: #EABB40 !important;
+  color: #fff !important;
+}
+
+.rdp-chevron {
+  fill:  #EABB40 !important;
+}
+
+.rdp-month_grid {
+  min-width: 30rem !important;
+}
