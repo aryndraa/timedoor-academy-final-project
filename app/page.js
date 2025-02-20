@@ -1,6 +1,7 @@
 import Image from "next/image";
 import cinemaImg from "@/app/_assets/cinema.jpg"
 import { DiscoverMovieForm } from "./components/DiscoverMovieForm";
+import { SectionTitle } from "./components/SectionTitle";
 
 export default function Home() {
   return (
@@ -20,6 +21,10 @@ export default function Home() {
           <DiscoverMovieForm/>
         </div>
       </section>
+      <section>
+        <SectionTitle title={"Now Playing"}/>
+      </section>
+
     </>
   );
 }
