@@ -22,7 +22,7 @@ export const DiscoverLocationSelect = () => {
 
   const handleSelectLocation = (location) => {
     setSelectedLocation(location);
-    setIsModalOpen(false);
+    handleOpenModal();
   };
 
   const handleBackCountry = () => {
@@ -30,9 +30,17 @@ export const DiscoverLocationSelect = () => {
     setSelectedLocation(null)
   }
 
+  const handleOpenModal = () => {
+    setIsModalOpen((prev) => {
+      const newState = !prev;
+      document.body.style.overflow = newState ? "hidden" : "";
+      return newState;
+    });
+  };
+
   return (
     <>
-      <div className="flex justify-between items-center w-full bg-dark-100 px-4 py-3 rounded-lg" onClick={() => setIsModalOpen(true)}>
+      <div className="flex justify-between items-center w-full bg-dark-100 px-4 py-3 rounded-lg" onClick={() => handleOpenModal()}>
         <div>
           <p className="text-white/40 text-sm lg:text-base font-medium capitalize">Location</p>
           <strong className="text-sm lg:text-lg font-semibold text-white capitalize">
@@ -45,7 +53,7 @@ export const DiscoverLocationSelect = () => {
       </div>
 
       {isModalOpen && (
-        <div className="fixed inset-0 bg-dark-300/60 flex items-center justify-center">
+        <div className="fixed inset-0 bg-dark-300/60 flex items-center justify-center z-40">
           <div className="bg-dark-200 min-w-[92%] lg:min-w-[40%]  p-6 rounded-lg">
             <h2 className="text-xl font-medium pb-4 mb-4 border-border border-b-2">Cinema Location</h2>
             {selectedCountry === null ? (
