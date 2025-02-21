@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} antialiased overflow-hidden bg-dark-300 `}
+        className={`${poppins.className} antialiased overflow-x-hidden bg-dark-300 min-h-[9999vh]`}
       >
         <Header/>
 
