@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation} from "swiper/modules";
 import { CoverCard } from "./cards/CoverCard";
 import { useState, useEffect } from "react";
 
@@ -29,7 +29,7 @@ export const NowPlaying = () => {
   return (
     <div className="mt-6 ">
       <Swiper
-        modules={[Navigation, Pagination]}
+        modules={[Navigation]}
         spaceBetween={12}
         slidesPerView={2.1}
         navigation={showNavigation}

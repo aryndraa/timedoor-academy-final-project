@@ -50,4 +50,5 @@ body {
 
 .swiper-button-prev:after, .swiper-button-next:after {
   font-size: 1.6rem !important;
+  font-weight: 800;
 }

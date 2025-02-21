@@ -28,7 +28,7 @@ export default function Home() {
         <SectionTitle title={"Now Playing"}/>
         <NowPlaying/>
       </section>
-      <section>
+      <section className="lg:mx-16">
         <SectionTitle title={"Upcoming Movies"}/>
         <UpcomingMovies/>
       </section>
