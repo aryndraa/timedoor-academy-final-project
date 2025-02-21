@@ -19,11 +19,20 @@ export const DiscoverDateSelect = () => {
       backgroundColor: '#fffdee',
     },
   };
+
+  const handleOpenModal = () => {
+    setIsOpen((prev) => {
+      const newState = !prev;
+      document.body.style.overflow = newState ? "hidden" : "";
+      return newState;
+    });
+  };
+
   return (
     <>
       <div
         className="flex justify-between items-center w-full bg-dark-100 px-4 py-3 rounded-lg cursor-pointer"
-        onClick={() => setIsOpen(true)}
+        onClick={() => handleOpenModal()}
       >
         <div>
           <p className="text-white/40 text-sm lg:text-base font-medium capitalize">Date</p>
@@ -42,7 +51,7 @@ export const DiscoverDateSelect = () => {
         </button>
       </div>
       {isOpen && (
-        <div className="min-h-screen  bg-dark-300/60 absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center z-40">
+        <div className="min-h-screen  bg-dark-300/60 fixed inset-0 flex items-center justify-center z-40">
           <div className="bg-dark-200 w-full max-w-[92%] lg:max-w-lg p-6 rounded-lg relative">
             <h2 className="text-xl font-medium pb-4 mb-4 border-border border-b-2 text-white">
               Select date
@@ -58,7 +67,7 @@ export const DiscoverDateSelect = () => {
             />
             <button
               className="mt-8 px-4 py-2 bg-white/20 text-white rounded-lg w-full"
-              onClick={() => setIsOpen(false)}
+              onClick={() => handleOpenModal()}
             >
               Close
             </button>
