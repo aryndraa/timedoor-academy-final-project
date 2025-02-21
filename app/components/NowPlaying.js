@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { NowPlayingCard } from "./cards/NowPlayingCard";
+import { CoverCard } from "./cards/CoverCard";
 
 export const NowPlaying = () => {
   return (
@@ -22,7 +22,7 @@ export const NowPlaying = () => {
       >
         {[...Array(5)].map((_, index) => (
           <SwiperSlide key={index}>
-            <NowPlayingCard />
+            <CoverCard />
           </SwiperSlide>
         ))}
       </Swiper>
