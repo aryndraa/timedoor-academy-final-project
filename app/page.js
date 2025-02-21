@@ -4,6 +4,7 @@ import { DiscoverMovieForm } from "./components/DiscoverMovieForm";
 import { SectionTitle } from "./components/SectionTitle";
 import { NowPlaying } from "./components/NowPlaying";
 import { UpcomingMovies } from "./components/UpcomingMovies";
+import { CinemaCard } from "./components/cards/CinemaCard";
 
 
 export default function Home() {
@@ -28,9 +29,17 @@ export default function Home() {
         <SectionTitle title={"Now Playing"}/>
         <NowPlaying/>
       </section>
-      <section className="lg:mx-16">
+      <section className="lg:mx-16 pb-8 lg:pb-10">
         <SectionTitle title={"Upcoming Movies"}/>
         <UpcomingMovies/>
+      </section>
+      <section className="lg:mx-16">
+        <SectionTitle title={"Cinema"}/>
+        <div className="grid grid-cols-3 gap-6 mt-6">
+          <CinemaCard/>          
+          <CinemaCard/>          
+          <CinemaCard/>          
+        </div>
       </section>
 
     </>
