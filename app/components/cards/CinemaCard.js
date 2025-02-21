@@ -8,7 +8,7 @@ export const CinemaCard = () => {
         alt="img"
         className="w-full h-[320px] object-cover rounded-lg mb-4"
       />
-      <div className="flex flex-col gap-4 px-4 py-2 absolute -bottom-5  shadow-lg bg-dark-300 rounded-lg mx-2">
+      <div className="flex flex-col gap-4 px-4 py-4 absolute -bottom-5  shadow-lg bg-dark-300 rounded-lg mx-2">
         <div >
           <h3 className="text-xl font-semibold mb-1">Lippo Mall  Kuta</h3>
           <p className="text-sm">Jalan Kartika Plaza Lingkar Segara, Kuta, Bali.....</p>

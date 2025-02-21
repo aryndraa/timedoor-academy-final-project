@@ -15,7 +15,7 @@ export const JoinBanner = () => {
           <h1 className='text-2xl lg:text-6xl font-semibold mb-2 lg:mb-4'>Join Membership</h1>
           <p className='text-sm  lg:max-w-xl font-extralight  '>Dapatkan banyak voucher menarik untuk menikmati berbagai film favoritmu di bioskop pilihan, mulai dari diskon tiket, hingga cashback spesial untuk setiap pembelian tiket online! 🍿🎬 </p>
         </div>
-        <div className='flex flex-col lg:flow-row gap-4 '>
+        <div className='flex flex-col lg:flex-row gap-4 '>
           <Link href={"/"} className='w-full lg:text-lg px-4 text-center lg:px-6 py-3 lg:py-3 border rounded-lg border-white text-white'>Log In</Link>
           <Link href={"/"} className='w-full lg:text-lg px-4 text-center lg:px-6 py-3 lg:py-3 border rounded-lg border-primary text-primary'>Register</Link>
         </div>
