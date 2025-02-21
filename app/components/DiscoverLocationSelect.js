@@ -53,7 +53,7 @@ export const DiscoverLocationSelect = () => {
       </div>
 
       {isModalOpen && (
-        <div className="absolute top-0 left-0 right-0 bottom-0 bg-dark-300/60 flex items-center justify-center z-40">
+        <div className="fixed inset-0 bg-dark-300/60 flex items-center justify-center z-40">
           <div className="bg-dark-200 min-w-[92%] lg:min-w-[40%]  p-6 rounded-lg">
             <h2 className="text-xl font-medium pb-4 mb-4 border-border border-b-2">Cinema Location</h2>
             {selectedCountry === null ? (
