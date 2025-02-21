@@ -5,6 +5,7 @@ import { SectionTitle } from "./components/SectionTitle";
 import { NowPlaying } from "./components/NowPlaying";
 import { UpcomingMovies } from "./components/UpcomingMovies";
 import { CinemaCard } from "./components/cards/CinemaCard";
+import { PopularCinema } from "./components/PopularCinema";
 
 
 export default function Home() {
@@ -35,11 +36,7 @@ export default function Home() {
       </section>
       <section className="lg:mx-16">
         <SectionTitle title={"Cinema"}/>
-        <div className="grid grid-cols-3 gap-6 mt-6">
-          <CinemaCard/>          
-          <CinemaCard/>          
-          <CinemaCard/>          
-        </div>
+        <PopularCinema/>
       </section>
 
     </>
