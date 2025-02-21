@@ -37,7 +37,7 @@ export const UpcomingMovies = () => {
           640: { slidesPerView: 2 },
           768: { slidesPerView: 3 },
           1024: { 
-            slidesPerView: 4.5,
+            slidesPerView: 4.2,
             spaceBetween: 32,
           },
         }}

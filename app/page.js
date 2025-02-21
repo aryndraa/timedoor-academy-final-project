@@ -4,8 +4,8 @@ import { DiscoverMovieForm } from "./components/DiscoverMovieForm";
 import { SectionTitle } from "./components/SectionTitle";
 import { NowPlaying } from "./components/NowPlaying";
 import { UpcomingMovies } from "./components/UpcomingMovies";
-import { CinemaCard } from "./components/cards/CinemaCard";
 import { PopularCinema } from "./components/PopularCinema";
+import { JoinBanner } from "./components/JoinBanner";
 
 
 export default function Home() {
@@ -34,11 +34,13 @@ export default function Home() {
         <SectionTitle title={"Upcoming Movies"}/>
         <UpcomingMovies/>
       </section>
-      <section className="lg:mx-16">
+      <section className="lg:mx-16 pb-12 lg:pb-16">
         <SectionTitle title={"Cinema"}/>
         <PopularCinema/>
       </section>
-
+      <section className="lg:mx-16">
+        <JoinBanner/>
+      </section>
     </>
   );
 }
