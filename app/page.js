@@ -24,7 +24,7 @@ export default function Home() {
           <DiscoverMovieForm/>
         </div>
       </section>
-      <section className="pb-8 lg:pb-10">
+      <section className="pb-8 lg:pb-10 lg:mx-16">
         <SectionTitle title={"Now Playing"}/>
         <NowPlaying/>
       </section>

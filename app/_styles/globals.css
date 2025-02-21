@@ -35,3 +35,19 @@ body {
     min-width:100%!important;
   }
 }
+
+.swiper-button-prev, .swiper-button-next {
+  color: #fff !important;
+  background: #EABB40 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 24px !important;
+  font-size: 12px !important;
+  border-radius: 50% ;
+}
+
+
+.swiper-button-prev:after, .swiper-button-next:after {
+  font-size: 1.6rem !important;
+}
