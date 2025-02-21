@@ -3,6 +3,7 @@ import cinemaImg from "@/app/_assets/cinema.jpg"
 import { DiscoverMovieForm } from "./components/DiscoverMovieForm";
 import { SectionTitle } from "./components/SectionTitle";
 import { NowPlaying } from "./components/NowPlaying";
+import { UpcomingMovies } from "./components/UpcomingMovies";
 
 
 export default function Home() {
@@ -23,9 +24,13 @@ export default function Home() {
           <DiscoverMovieForm/>
         </div>
       </section>
-      <section>
+      <section className="pb-8 lg:pb-10">
         <SectionTitle title={"Now Playing"}/>
         <NowPlaying/>
+      </section>
+      <section>
+        <SectionTitle title={"Upcoming Movies"}/>
+        <UpcomingMovies/>
       </section>
 
     </>
