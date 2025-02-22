@@ -11,7 +11,7 @@ import { JoinBanner } from "./components/JoinBanner";
 export default function Home() {
   return (
     <>
-      <section className="min-h-[60vh] flex flex-col gap-6 lg:gap-12 lg:items-center lg:justify-end py-8">
+      <section className="min-h-[60vh] flex flex-col gap-6 lg:gap-12 lg:items-center lg:justify-end py-8 ">
         <div className="-z-10 hidden lg:block">
           <Image src={cinemaImg} alt="hero" fill={true} className="max-h-[40vh] lg:max-h-[60vh] object-cover"/>
           <div className="min-h-[40vh] lg:min-h-[60vh] absolute top-0 left-0 right-0 bg-gradient-to-b from-dark-300/10  to-dark-300"></div>
@@ -34,7 +34,7 @@ export default function Home() {
         <SectionTitle title={"Upcoming Movies"}/>
         <UpcomingMovies/>
       </section>
-      <section className="lg:mx-16 pb-12 lg:pb-16">
+      <section className="lg:mx-16 pb-12 lg:pb-24">
         <SectionTitle title={"Cinema"}/>
         <PopularCinema/>
       </section>
