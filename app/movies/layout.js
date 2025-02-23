@@ -18,6 +18,10 @@ export default function RootLayout({ children }) {
           pathname === "/movies/upcoming" ? "border-primary text-primary" : "border-transparent"
          }`}>Upcoming Movies</Link>
        </div>
+
+       <div>
+        {children}
+       </div>
      </section>
     </>
   )
