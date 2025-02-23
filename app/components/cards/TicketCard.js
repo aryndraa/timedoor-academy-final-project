@@ -5,7 +5,8 @@ import { FaLocationDot } from "react-icons/fa6";
 export const TicketCard = () => {
   return (
     <>
-      <div
+      <Link
+        href={"/my-tickets/1"}
         style={{ 
           backgroundImage: "url('https://i.pinimg.com/736x/00/e4/9c/00e49c82c7c9438dc4484a58e199123d.jpg')"
          }}
@@ -31,7 +32,7 @@ export const TicketCard = () => {
             </p>
           </div>
         </div>
-      </div>
+      </Link>
 
       <Link href={"/my-tickets/1"} className="bg-dark-250 p-3 lg:hidden rounded-lg flex items-center gap-3">
         <img 
