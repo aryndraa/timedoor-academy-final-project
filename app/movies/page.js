@@ -1,9 +1,7 @@
 export default function Page () {
   return (
     <>
-      <section>
-        
-      </section>
+     <div>Play now</div>
     </>
   )
 }
