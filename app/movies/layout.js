@@ -9,12 +9,12 @@ export default function RootLayout({ children }) {
 
   return (
     <>
-     <section className="min-h-[60vh] flex flex-col  py-4 lg:mx-16 pb-12 lg:pb-24">
-       <div className="flex justify-center gap-6 mb-12">
-         <Link href={"/movies"}  className={`font-medium  border-b-2  pb-3  ${
+     <section className="min-h-[60vh] flex flex-col  py-8 lg:mx-16 pb-12 lg:pb-24">
+       <div className="flex lg:justify-center gap-4 lg:gap-6 mb-8 lg:mb-14">
+         <Link href={"/movies"}  className={`font-medium lg:text-lg  border-b-2  pb-3  ${
           pathname === "/movies" ? "border-primary text-primary" : "border-transparent"
          }`}>Playing Now</Link>
-         <Link href={"/movies/upcoming"} className={`font-medium  border-b-2  pb-3 ${
+         <Link href={"/movies/upcoming"} className={`font-medium lg:text-lg  border-b-2  pb-3 ${
           pathname === "/movies/upcoming" ? "border-primary text-primary" : "border-transparent"
          }`}>Upcoming Movies</Link>
        </div>

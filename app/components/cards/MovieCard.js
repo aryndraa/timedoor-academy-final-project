@@ -17,7 +17,7 @@ export const MovieCard = () => {
             <span><FaRegClock/></span>
             1h  18m
           </p>
-          <span className="text-xs lg:text-base bg-dark-100 p-[3px] rounded-lg">13+</span>
+          <span className="text-xs lg:text-base bg-dark-100 p-[3px] lg:px-2 rounded-lg">13+</span>
         </div>
       </div>
     </div>
