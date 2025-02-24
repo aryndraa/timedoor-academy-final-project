@@ -1,7 +1,14 @@
+import { MovieCard } from "../components/cards/MovieCard";
+
 export default function Page () {
   return (
     <>
-     <div>Play now</div>
+     <div className="grid grid-cols-4 gap-8">
+        <MovieCard/>
+        <MovieCard/>
+        <MovieCard/>
+        <MovieCard/>
+     </div>
     </>
   )
 }
