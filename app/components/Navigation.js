@@ -33,7 +33,7 @@ export const Navigation = () => {
 
   return (
     <nav >
-      <ul className="flex gap-8 justify-between items-center">
+      <ul className="flex lg:gap-8 justify-between items-center">
         {links.map((link, key) => (
           <li key={key}>
             <NavLink name={link.name} path={link.path} icon={link.icon}/>
