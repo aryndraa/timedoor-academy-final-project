@@ -1,8 +1,9 @@
+import Link from "next/link";
 import { FaRegClock } from "react-icons/fa";
 
 export const MovieCard = () => {
   return (
-    <div>
+    <Link href={"/movies/1"}>
       <div className="relative mb-3 ">
         <img
           src="https://i.pinimg.com/736x/de/9a/e7/de9ae780aae37dbf947a56ad63ffd956.jpg"
@@ -20,6 +21,6 @@ export const MovieCard = () => {
           <span className="text-xs lg:text-base bg-dark-100 p-[3px] lg:px-2 rounded-lg">13+</span>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
