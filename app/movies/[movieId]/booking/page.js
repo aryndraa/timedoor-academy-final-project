@@ -1,6 +1,7 @@
 import { BackBar } from '@/app/components/BackBar'
 import { BookSelectCinema } from '@/app/components/BookSelectCinema'
 import { BookSelectLocation } from '@/app/components/BookSelectLocation'
+import { BottomBarCover } from '@/app/components/BottomBarCover'
 import React from 'react'
 
 export default function Page ()  {
@@ -14,6 +15,7 @@ export default function Page ()  {
           </div>
           <BookSelectCinema/>
       </div>
+      <BottomBarCover/>
     </section>
   )
 }
