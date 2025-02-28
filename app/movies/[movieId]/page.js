@@ -1,6 +1,7 @@
 import { BottomBook } from "@/app/components/BottomBook";
 import { MovieCard } from "@/app/components/cards/MovieCard";
 import { MovieInfo } from "@/app/components/MovieInfo";
+import { MovieSynopsis } from "@/app/components/MovieSynopsis";
 import Image from "next/image";
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
@@ -31,10 +32,13 @@ export default function Page ()  {
               </div>
               <div>
               </div>
-              <div className="grid grid-cols-3 border-y py-3 relative  border-border/20">
+              <div className="grid grid-cols-3 border-y py-3 relative mb-4  border-border/20">
                 <MovieInfo info={"SU"} infoDetail={"Semua Usia"}/>
                 <MovieInfo info={"140"} infoDetail={"Minute"}/>
                 <MovieInfo info={"ID"} infoDetail={"Indonesia"}/>
+              </div>
+              <div>
+                <MovieSynopsis/>
               </div>
             </div>
           </div>
