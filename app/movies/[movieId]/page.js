@@ -1,5 +1,6 @@
 import { BottomBook } from "@/app/components/BottomBook";
 import { MovieCard } from "@/app/components/cards/MovieCard";
+import { MovieCasters } from "@/app/components/MovieCasters";
 import { MovieInfo } from "@/app/components/MovieInfo";
 import { MovieSynopsis } from "@/app/components/MovieSynopsis";
 import Image from "next/image";
@@ -32,13 +33,16 @@ export default function Page ()  {
               </div>
               <div>
               </div>
-              <div className="grid grid-cols-3 border-y py-3 relative mb-4  border-border/20">
+              <div className="grid grid-cols-3 border-y py-4 relative mb-6  border-border/20">
                 <MovieInfo info={"SU"} infoDetail={"Semua Usia"}/>
                 <MovieInfo info={"140"} infoDetail={"Minute"}/>
                 <MovieInfo info={"ID"} infoDetail={"Indonesia"}/>
               </div>
-              <div>
+              <div className="mb-6">
                 <MovieSynopsis/>
+              </div>
+              <div className="">
+                <MovieCasters/>
               </div>
             </div>
           </div>
