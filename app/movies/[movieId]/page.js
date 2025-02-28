@@ -1,3 +1,4 @@
+import { BottomBook } from "@/app/components/BottomBook";
 import { MovieCard } from "@/app/components/cards/MovieCard";
 import { MovieInfo } from "@/app/components/MovieInfo";
 import Image from "next/image";
@@ -37,7 +38,9 @@ export default function Page ()  {
               </div>
             </div>
           </div>
-      </div>
+        </div>
+
+        <BottomBook/>
       </section>
     </>
   )
