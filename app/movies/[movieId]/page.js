@@ -55,7 +55,7 @@ export default function Page ()  {
                  className="w-full h-[320px] object-cover rounded-lg mb-4 rounded-lg"
             />
             <div className="flex flex-col gap-4 w-full">
-             <Link href={"/"} className="p-3 border rounded-lg bg-primary text-dark-300 font-semibold text-center border-primary w-full">Book Now</Link>
+             <Link href={"/movies/1/booking"} className="p-3 border rounded-lg bg-primary text-dark-300 font-semibold text-center border-primary w-full">Book Now</Link>
              <Link href={"/"} className="p-3 border rounded-lg border-primary w-full text-primary font-medium  text-center">Watch Trailer </Link>
             </div>
           </div>
