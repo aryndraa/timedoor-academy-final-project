@@ -1,8 +1,9 @@
+import Link from "next/link";
 import { FaRegClock } from "react-icons/fa6";
 
 export const CinemaCard = () => {
   return (
-    <div className="p-4 lg:p-6 bg-dark-250 rounded-lg">
+    <Link href={"/movies/1/booking/reservation"} className="p-4 lg:p-6 bg-dark-250 rounded-lg">
       <div className="mb-4">
         <h3 className="font-semibold lg:text-lg mb-1">Lippo Mall  Kuta</h3>
         <p className="text-xs text-text-400 lg:hidden">Jalan Kartika Plaza Lingkar Segara, Kuta, Bali.....</p>
@@ -15,6 +16,6 @@ export const CinemaCard = () => {
         </div>
         <span className="font-semibold text-sm lg:text-base">REGULER | VIP | IMAX</span>
       </div>
-    </div>
+    </Link>
   )
 }

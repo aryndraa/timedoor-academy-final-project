@@ -9,7 +9,7 @@ export default function Page ()  {
     <section className='lg:mx-16'>
       <BackBar/>
       <div className='mt-4 lg:mt-0'>
-         <div className='flex justify-between items-center mb-6'>
+         <div className='flex justify-between items-center mb-6 lg:mb-8'>
             <h2 className='text-xl  font-medium text-text-200'>Select Cinema</h2>
             <BookSelectLocation/>
           </div>

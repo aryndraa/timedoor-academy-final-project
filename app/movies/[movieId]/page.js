@@ -52,7 +52,7 @@ export default function Page ()  {
           <div className="flex flex-col items-start mb-4 w-[22%] transform -translate-y-20">
             <img src="https://i.pinimg.com/736x/de/9a/e7/de9ae780aae37dbf947a56ad63ffd956.jpg"
                  alt="cover" 
-                 className="w-full h-[320px] object-cover rounded-lg mb-4 rounded-lg"
+                 className="w-full h-[320px] object-cover mb-4 rounded-lg"
             />
             <div className="flex flex-col gap-4 w-full">
              <Link href={"/movies/1/booking"} className="p-3 border rounded-lg bg-primary text-dark-300 font-semibold text-center border-primary w-full">Book Now</Link>
