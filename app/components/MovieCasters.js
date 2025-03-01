@@ -16,7 +16,7 @@ export const MovieCasters = () => {
         breakpoints={{
           640: { slidesPerView: 3.5 },
           768: { slidesPerView: 3 },
-          1024: { slidesPerView: 4 },
+          1024: { slidesPerView: 4.5 },
         }}
       >
         <SwiperSlide><CasterCard /></SwiperSlide>

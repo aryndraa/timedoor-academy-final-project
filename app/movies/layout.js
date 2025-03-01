@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
              <Link href={"/"} className="text-2xl  p-2 rounded-full bg-dark-100">
                <IoSearch/>
              </Link>
-           </div>
+           </div> 
            <div className="flex  gap-4 lg:gap-6">
              <Link  href={"/movies"}  className={`font-medium lg:text-lg  border-b-2  pb-3 lg:pb-4  ${
                  pathname === "/movies" ? "border-primary text-primary" : "border-transparent"

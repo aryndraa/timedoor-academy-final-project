@@ -6,7 +6,7 @@ import React from 'react'
 
 export default function Page ()  {
   return (
-    <section>
+    <section className='lg:mx-16'>
       <BackBar/>
       <div className='mt-4'>
          <div className='flex justify-between items-center mb-6'>
