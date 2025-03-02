@@ -6,7 +6,7 @@ import { HoursSelect } from "./HoursSelect";
 
 export const ReservationTime = () => {
   return (
-    <div className="bg-dark-200 px-4 py-5 rounded-lg">
+    <div className="bg-dark-200 px-4 py-5 lg:p-8  rounded-lg">
       <div className="mb-4">
         <Swiper spaceBetween={12} slidesPerView={3.6} breakpoints={{
           640: { slidesPerView: 3.6 },
