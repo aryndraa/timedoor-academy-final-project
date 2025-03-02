@@ -1,5 +1,11 @@
+import { BackBar } from '@/app/components/BackBar'
+import { BottomBarCover } from '@/app/components/BottomBarCover'
+
 export default function page() {
   return (
-    <div>page</div>
+    <section>
+      <BackBar/>
+      <BottomBarCover/>
+    </section>
   )
 }

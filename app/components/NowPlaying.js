@@ -13,16 +13,15 @@ export const NowPlaying = () => {
   const [showNavigation, setShowNavigation] = useState(false);
 
   useEffect(() => {
-    // Fungsi untuk mengecek lebar layar
     const handleResize = () => {
       setShowNavigation(window.innerWidth >= 1024);
     };
 
-    handleResize(); // Cek saat komponen pertama kali dirender
-    window.addEventListener("resize", handleResize); // Tambah event listener
+    handleResize(); 
+    window.addEventListener("resize", handleResize); 
 
     return () => {
-      window.removeEventListener("resize", handleResize); // Cleanup
+      window.removeEventListener("resize", handleResize); 
     };
   }, []);
 
