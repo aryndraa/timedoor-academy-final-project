@@ -2,9 +2,9 @@ import { TicketPaymentInfo } from "./TicketPaymentInfo"
 
 export const TicketPaymentDetail = () => {
   return (
-    <div>
+    <div className="pb-6 mb-6 border-b border-border">
       <h2 className="pb-6 mb-6 text-2xl font-medium border-b border-border">Ruroini Kenshin</h2>
-      <div className="grid grid-cols-2 gap-4 gap-y-6 pb-6 mb-6 border-b border-border">
+      <div className="grid grid-cols-2 gap-4 gap-y-6 ">
         <TicketPaymentInfo title={"Cinema"} info={"Lippo Mall Kuta"}/>
         <TicketPaymentInfo title={"Type Cinema"} info={"Reguler"}/>
         <TicketPaymentInfo title={"Date"} info={"12 / 12 / 2012"}/>
