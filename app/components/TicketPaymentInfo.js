@@ -1,8 +1,8 @@
-export const TicketPaymentInfo = () => {
+export const TicketPaymentInfo = ({title, info}) => {
   return (
     <div className="w-full">
-      <h3 className="text-xs text-text-400 mb-1">Cinema</h3>
-      <span className="font-semibold">Lippo Mall Kuta</span>
+      <h3 className="text-xs text-text-400 mb-1.5">{title}</h3>
+      <span className="font-medium">{info}</span>
     </div>
   )
 }
