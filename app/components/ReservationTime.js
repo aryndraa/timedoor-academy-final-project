@@ -10,7 +10,7 @@ export const ReservationTime = () => {
       <div className="mb-4">
         <Swiper spaceBetween={12} slidesPerView={3.6} breakpoints={{
           640: { slidesPerView: 3.6 },
-          1024: { slidesPerView: 4 }
+          1024: { slidesPerView: 4.2 }
         }}>
           <SwiperSlide><DateSelect /></SwiperSlide>
           <SwiperSlide><DateSelect /></SwiperSlide>

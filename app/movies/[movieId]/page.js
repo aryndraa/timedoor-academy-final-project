@@ -14,7 +14,6 @@ export default function Page ()  {
           <div className="min-h-[30vh] absolute lg:-z-10 top-0 left-0 right-0 bg-gradient-to-b from-dark-300/10  to-dark-300"></div>
         </div>
 
-
         {/* Mobile View */}
         <div className="lg:hidden">
           <div className="lg:hidden">

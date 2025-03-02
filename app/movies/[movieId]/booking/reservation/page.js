@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export default function Page () {
   return (
-    <section>
+    <section className='lg:mx-16 max-w-2xl '>
       <BackBar/>
       <div className='relative z-[70] mt-4'>
         <div className='mb-6'>
