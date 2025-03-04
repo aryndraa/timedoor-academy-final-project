@@ -35,8 +35,11 @@
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/laravel/pint" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/laravel/prompts" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/laravel/sail" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/laravel/sanctum" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/laravel/serializable-closure" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/laravel/tinker" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/lcobucci/clock" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/lcobucci/jwt" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/league/commonmark" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/league/config" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/league/flysystem" />
@@ -99,6 +102,7 @@
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/sebastian/type" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/sebastian/version" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/staabm/side-effects-detector" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/stella-maris/clock" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/clock" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/console" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/css-selector" />
@@ -131,6 +135,7 @@
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/ta-tikoma/phpunit-architecture-test" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/theseer/tokenizer" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/tijsverkoyen/css-to-inline-styles" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/tymon/jwt-auth" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/webmozart/assert" />
