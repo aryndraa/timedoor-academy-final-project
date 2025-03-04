@@ -50,5 +50,5 @@ export const logout = async (token) => {
 }
 
 export const checkLoginStatus = () => {
-  return hasInStorage('adminToken', true);
+  return hasInStorage('userToken');
 }

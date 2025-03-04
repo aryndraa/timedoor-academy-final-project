@@ -6,7 +6,7 @@
  * @param {boolean} useSession - Gunakan sessionStorage jika true, localStorage jika false (default: false).
  */
 export const saveToStorage = (key, value, useSession = false) => {
-  const storage = useSession ? sessionStorage : sessionStorage;
+  const storage = useSession ? sessionStorage : localStorage;
   storage.setItem(key, value);
 };
 
@@ -18,7 +18,7 @@ export const saveToStorage = (key, value, useSession = false) => {
  * @returns {any} - Data yang diambil atau null jika tidak ditemukan.
  */
 export const getFromStorage = (key, useSession = false, parse = false) => {
-  const storage = useSession ? sessionStorage : sessionStorage;
+  const storage = useSession ? sessionStorage : localStorage;
   const data = storage.getItem(key);
 
   if (data) {
@@ -47,7 +47,8 @@ export const removeFromStorage = (key, useSession = false) => {
  * @returns {boolean} - True jika kunci ada, false jika tidak ada.
  */
 export const hasInStorage = (key, useSession = false) => {
-  const storage = useSession ? sessionStorage : localStorage;
+  if (typeof window === 'undefined') return false;
 
+  const storage = useSession ? sessionStorage : localStorage;
   return storage.getItem(key) !== null;
 };

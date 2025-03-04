@@ -9,6 +9,7 @@ import { JoinBanner } from "./components/JoinBanner";
 
 
 export default function Home() {
+
   return (
     <>
       <section className="min-h-[60vh] flex flex-col gap-6 lg:gap-12 lg:items-center lg:justify-end py-8 ">

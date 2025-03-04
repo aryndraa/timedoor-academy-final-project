@@ -2,7 +2,7 @@ import axios from 'axios';
 import {getFromStorage} from "@/app/_utils/storage";
 
 const apiClient = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
+  baseURL: process.env.NEXT_PUBLIC_API_BASEURL,
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
@@ -12,7 +12,6 @@ const apiClient = axios.create({
 apiClient.interceptors.request.use(
   (config) => {
     const token = getFromStorage('userToken');
-
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }

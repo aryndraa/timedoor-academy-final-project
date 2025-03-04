@@ -1,5 +1,15 @@
+import {checkLoginStatus} from "@/app/_lib/auth";
+
 export default function Page () {
-  return (
-    <h1>Profile</h1>
+  const authorize = checkLoginStatus();
+
+  return authorize ? (
+    <h1>
+      Profile
+    </h1>
+  ) : (
+    <h1>
+      Not Authorized
+    </h1>
   )
 }
