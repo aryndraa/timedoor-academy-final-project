@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Cinema extends Model
 {
@@ -12,4 +13,8 @@ class Cinema extends Model
         'opening_time',
         'closing_time',
     ];
+
+    public function studio(): HasMany {
+        return $this->hasMany(Studio::class);
+    }
 }
