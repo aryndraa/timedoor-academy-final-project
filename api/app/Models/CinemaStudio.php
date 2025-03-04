@@ -23,4 +23,8 @@ class CinemaStudio extends Model
     public function prices(): HasMany {
         return $this->hasMany(MoviePrice::class);
     }
+
+    public function bookings(): HasMany {
+        return $this->hasMany(UserBooking::class);
+    }
 }
