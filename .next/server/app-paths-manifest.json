@@ -1,9 +1,0 @@
-{
-  "/page": "app/page.js",
-  "/cinemas/page": "app/cinemas/page.js",
-  "/my-tickets/page": "app/my-tickets/page.js",
-  "/movies/page": "app/movies/page.js",
-  "/movies/[movieId]/booking/payment/page": "app/movies/[movieId]/booking/payment/page.js",
-  "/movies/[movieId]/booking/reservation/page": "app/movies/[movieId]/booking/reservation/page.js",
-  "/movies/upcoming/page": "app/movies/upcoming/page.js"
-}
