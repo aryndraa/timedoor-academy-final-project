@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class UserBooking extends Model
 {
@@ -27,5 +28,9 @@ class UserBooking extends Model
 
     public function movie(): BelongsTo {
         return $this->belongsTo(Movie::class);
+    }
+
+    public function seats(): HasMany {
+        return $this->hasMany(UserSeatBookings::class);
     }
 }
