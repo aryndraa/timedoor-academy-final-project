@@ -3,13 +3,10 @@
 namespace App\Http\Controllers\Api\V1\User\Auth;
 
 use App\Http\Controllers\BaseController;
-use App\Http\Controllers\Controller;
+use App\Http\Requests\Api\V1\User\Auth\LoginRequest;
 use App\Http\Requests\Api\V1\User\Auth\RegisterRequest;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
-use Tymon\JWTAuth\Facades\JWTAuth;
 
 class AuthController extends BaseController
 {
@@ -25,7 +22,7 @@ class AuthController extends BaseController
     public function login(LoginRequest $request): JsonResponse {
         $user = User::query()->where('email', $request->email)->first();
 
-        if (!$user || ! auth('user')->attempt(['email' => $user->email, 'password' => $user->$request['password']])) {
+        if (!$user) {
             return $this->sendError('Unauthorized.', ['error' => 'Unauthorized']);
         }
 
