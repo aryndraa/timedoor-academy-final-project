@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Movie {
+  id              Int      @id @default(autoincrement())
+  title           String
+  genre           String
+  age_restriction String
+  duration        Int
+  language        String
+  synopsis        String
+  start_date      DateTime
+  end_date        DateTime
+  created_at      DateTime @default(now())
+  updated_at      DateTime @updatedAt
+}
+
+model Cinema {
+  id           Int      @id @default(autoincrement())
+  name         String
+  address      String
+  opening_time String
+  closing_time String
+  created_at   DateTime @default(now())
+  updated_at   DateTime @updatedAt
+}
+
+model Studio {
+  id         Int      @id @default(autoincrement())
+  name       String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
