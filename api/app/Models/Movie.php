@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 
 class Movie extends Model
 {
@@ -29,5 +30,9 @@ class Movie extends Model
 
     public function bookings(): HasMany {
         return $this->hasMany(UserBooking::class);
+    }
+
+    public function cover():MorphOne {
+        return $this->morphOne(File::class, 'related');
     }
 }
