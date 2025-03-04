@@ -6,6 +6,7 @@ import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
 
 export default function Page ()  {
+
   return (
     <>
       <section className='lg:mx-16'>
