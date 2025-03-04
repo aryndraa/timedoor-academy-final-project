@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserSeatBookings extends Model
+class UserSeatBooking extends Model
 {
     protected $fillable = [
         'column',

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class UserBooking extends Model
 {
@@ -31,6 +32,10 @@ class UserBooking extends Model
     }
 
     public function seats(): HasMany {
-        return $this->hasMany(UserSeatBookings::class);
+        return $this->hasMany(UserSeatBooking::class);
+    }
+
+    public function code(): HasOne {
+        return $this->hasOne(UserBookingCode::class);
     }
 }
