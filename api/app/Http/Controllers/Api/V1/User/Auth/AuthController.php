@@ -22,6 +22,19 @@ class AuthController extends BaseController
         return $this->sendResponse($success, 'User Register successfully.');
     }
 
+    public function login(LoginRequest $request): JsonResponse {
+        $user = User::query()->where('email', $request->email)->first();
+
+        if (!$user || ! auth('user')->attempt(['email' => $user->email, 'password' => $user->$request['password']])) {
+            return $this->sendError('Unauthorized.', ['error' => 'Unauthorized']);
+        }
+
+        $token = auth('user')->tokenById($user->id);
+        $success = $this->respondWithToken($token);
+
+        return $this->sendResponse($success, 'User login successfully.');
+    }
+
     protected function respondWithToken($token): array
     {
         return [
