@@ -22,4 +22,8 @@ class Movie extends Model
     public function casters(): HasMany {
         return $this->hasMany(MovieCaster::class);
     }
+
+    public function prices(): HasMany {
+        return $this->hasMany(MoviePrice::class);
+    }
 }
