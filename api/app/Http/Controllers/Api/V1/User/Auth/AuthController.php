@@ -35,6 +35,13 @@ class AuthController extends BaseController
         return $this->sendResponse($success, 'User login successfully.');
     }
 
+    public function logout(): JsonResponse
+    {
+        auth()->logout();
+
+        return $this->sendResponse([], 'Successfully logged out.');
+    }
+
     protected function respondWithToken($token): array
     {
         return [
