@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('duration');
             $table->string('language');
             $table->text('synopsis');
+            $table->string('author');
             $table->dateTime('start_date');
             $table->dateTime('end_date');
             $table->timestamps();
