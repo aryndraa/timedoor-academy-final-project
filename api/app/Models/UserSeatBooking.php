@@ -11,7 +11,7 @@ class UserSeatBooking extends Model
         'row'
     ];
 
-    public function userBooking() {
-        return $this->belongsTo(UserBooking::class, 'id');
+    public function userBookings() {
+        return $this->belongsTo(UserBooking::class);
     }
 }

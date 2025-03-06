@@ -11,7 +11,7 @@ class UserBookingCode extends Model
         'code'
     ];
 
-    public function bookings(): BelongsTo {
+    public function userBooking(): BelongsTo {
         return $this->belongsTo(UserBooking::class);
     }
 }
