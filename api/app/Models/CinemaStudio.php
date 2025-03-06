@@ -9,7 +9,9 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class CinemaStudio extends Model
 {
     protected $fillable = [
-        'total_seats'
+        'total_seats',
+        'cinema_id',
+        'studio_id',
     ];
 
     public function cinema(): BelongsTo {
