@@ -81,13 +81,9 @@ class MovieResource extends Resource
             ->columns([
                 TextColumn::make('title')->sortable()->searchable(),
                 TextColumn::make('genre')->sortable()->searchable(),
-                TextColumn::make('age_restriction'),
-                TextColumn::make('duration'),
-                TextColumn::make('language'),
                 TextColumn::make('start_date')->date(),
                 TextColumn::make('end_date')->date(),
-                ImageColumn::make('cover.file_link')
-                    ->disk('public')
+                ImageColumn::make('cover.file_url')
                     ->label('Cover'),
             ])
             ->filters([])

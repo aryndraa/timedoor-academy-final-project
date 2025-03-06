@@ -53,6 +53,7 @@ class MovieCasterResource extends Resource
     {
         if (!$record) return;
 
+
         if ($record->picture) {
             Storage::disk('public')->delete($record->picture->file_path);
             $record->picture->delete();
@@ -78,7 +79,6 @@ class MovieCasterResource extends Resource
                     ->sortable()
                     ->searchable(),
                 ImageColumn::make('picture.file_url')
-                    ->disk('public/')
                     ->label('Picture'),
             ])
             ->actions([
