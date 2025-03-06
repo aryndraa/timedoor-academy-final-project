@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Http\UploadedFile;
 
 class File extends Model
 {
@@ -12,6 +13,19 @@ class File extends Model
         'file_path',
         'file_type',
     ];
+
+    public static function uploadFile(UploadedFile $file, Model $model, $relation, $directory)
+    {
+        $filePath = $file->store($directory, 'public');
+        $fileName = $file->getClientOriginalName();
+        $fileType = $file->getMimeType();
+
+        return $model->$relation()->create([
+            'file_name' => $fileName,
+            'file_path' => $filePath,
+            'file_type' => $fileType,
+        ]);
+    }
 
     public function related(): MorphTo {
         return $this->morphTo();

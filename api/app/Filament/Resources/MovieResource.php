@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\MovieResource\Pages;
+use App\Models\File;
 use App\Models\Movie;
 use Filament\Forms;
 use Filament\Forms\Components\TextInput;
@@ -13,6 +14,9 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ImageColumn;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 
 class MovieResource extends Resource
 {
@@ -48,9 +52,26 @@ class MovieResource extends Resource
             DatePicker::make('end_date')
                 ->required(),
             FileUpload::make('cover')
-                ->image()
-                ->directory('movies/covers')
-                ->columnSpanFull(),
+                ->required()
+                ->afterStateUpdated(fn ( $state, ?Model $record) => self::saveCover($record, $state)),
+        ]);
+    }
+
+    protected static function saveCover(?Model $record, UploadedFile $file): void
+    {
+        if (!$record) return;
+
+        if ($record->cover) {
+            Storage::disk('public')->delete($record->cover->file_path);
+            $record->cover->delete();
+        }
+
+        $filePath = $file->store('movie/covers', 'public');
+
+        $record->cover()->create([
+            'file_name' => $file->getClientOriginalName(),
+            'file_path' => $filePath,
+            'file_type' => $file->getMimeType(),
         ]);
     }
 
@@ -65,7 +86,9 @@ class MovieResource extends Resource
                 TextColumn::make('language'),
                 TextColumn::make('start_date')->date(),
                 TextColumn::make('end_date')->date(),
-                ImageColumn::make('cover')->disk('public'),
+                ImageColumn::make('cover.path')
+                    ->disk('public')
+                    ->label('Cover'),
             ])
             ->filters([])
             ->actions([
@@ -85,9 +108,9 @@ class MovieResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListMovies::route('/'),
+            'index'  => Pages\ListMovies::route('/'),
             'create' => Pages\CreateMovie::route('/create'),
-            'edit' => Pages\EditMovie::route('/{record}/edit'),
+            'edit'   => Pages\EditMovie::route('/{record}/edit'),
         ];
     }
 }
