@@ -1,6 +1,8 @@
 <?php
 
+use App\Filament\Resources\VoucherResource;
 use Illuminate\Auth\AuthenticationException;
+use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -24,4 +26,8 @@ return Application::configure(basePath: dirname(__DIR__))
                 ], 401);
             }
         });
-    })->create();
+    })
+    ->withSchedule(function(Schedule $schedule) {
+        $schedule->call([VoucherResource::class, 'schedule'])->dailyAt('23:59');
+    })
+    ->create();
