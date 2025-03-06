@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class MoviePrice extends Model
 {
     protected $fillable = [
-        'price'
+        'price',
+        'movie_id',
+        'cinema_studio_id'
     ];
 
     public function movie(): BelongsTo {
