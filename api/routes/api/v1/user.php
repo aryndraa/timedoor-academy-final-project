@@ -21,6 +21,7 @@ Route::prefix('user/')
             ->name('movies.')
             ->group(function () {
                 Route::get('', 'index')->name('index');
+                Route::get('/{movie}', 'show')->name('show');
             });
 
 
