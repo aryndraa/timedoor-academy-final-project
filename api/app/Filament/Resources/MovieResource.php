@@ -86,7 +86,7 @@ class MovieResource extends Resource
                 TextColumn::make('language'),
                 TextColumn::make('start_date')->date(),
                 TextColumn::make('end_date')->date(),
-                ImageColumn::make('cover.path')
+                ImageColumn::make('cover.file_link')
                     ->disk('public')
                     ->label('Cover'),
             ])

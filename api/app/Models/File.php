@@ -14,6 +14,15 @@ class File extends Model
         'file_type',
     ];
 
+    public function getFileUrlAttribute()
+    {
+        if ($this->file_path) {
+            return asset('storage/' . $this->file_path);
+        }
+
+        return secure_asset(null);
+    }
+
     public static function uploadFile(UploadedFile $file, Model $model, $relation, $directory)
     {
         $filePath = $file->store($directory, 'public');
