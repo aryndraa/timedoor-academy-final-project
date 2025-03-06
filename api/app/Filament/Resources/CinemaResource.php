@@ -2,14 +2,13 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\MovieCasterResource\Pages;
-use App\Filament\Resources\MovieCasterResource\RelationManagers;
-use App\Models\Movie;
-use App\Models\MovieCaster;
+use App\Filament\Resources\CinemaResource\Pages;
+use App\Filament\Resources\CinemaResource\RelationManagers;
+use App\Models\Cinema;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\TimePicker;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -22,31 +21,32 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 
-class MovieCasterResource extends Resource
+class CinemaResource extends Resource
 {
-    protected static ?string $model = MovieCaster::class;
+    protected static ?string $model = Cinema::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-user-group';
+    protected static ?string $navigationIcon = 'heroicon-o-building-office';
 
     public static function form(Form $form): Form
     {
-        return $form->schema([
-            TextInput::make('name')
-                ->required()
-                ->maxLength(255),
-            Select::make('movie_id')
-                ->label('Movie')
-                ->relationship('movie', 'title')
-                ->searchable()
-                ->preload()
-                ->required()
-                ->rules(['required', 'exists:movies,id']),
-            FileUpload::make('picture')
-                ->image()
-                ->directory('casters/pictures')
-                ->disk('public')
-                ->afterStateUpdated(fn ($state, ?Model $record) => self::savePicture($record, $state)),
-        ]);
+        return $form
+            ->schema([
+                TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
+                TextInput::make('address')
+                    ->required()
+                    ->maxLength(500),
+                TimePicker::make('opening_time')
+                    ->required(),
+                TimePicker::make('closing_time')
+                    ->required(),
+                FileUpload::make('picture')
+                    ->image()
+                    ->directory('cinema')
+                    ->disk('public')
+                    ->afterStateUpdated(fn ($state, ?Model $record) => self::savePicture($record, $state)),
+            ]);
     }
 
     protected static function savePicture(?Model $record, UploadedFile $file): void
@@ -59,7 +59,7 @@ class MovieCasterResource extends Resource
             $record->picture->delete();
         }
 
-        $filePath = $file->store('movie/casters', 'public');
+        $filePath = $file->store('cinema', 'public');
 
 
         $record->picture()->create([
@@ -74,16 +74,18 @@ class MovieCasterResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name')->sortable()->searchable(),
-                TextColumn::make('movie.title')
-                    ->label('Movie')
-                    ->sortable()
-                    ->searchable(),
-                ImageColumn::make('picture.file_url')
-                    ->label('Picture'),
+                TextColumn::make('address')->sortable()->searchable(),
+                TextColumn::make('opening_time')->sortable(),
+                TextColumn::make('closing_time')->sortable(),
+                ImageColumn::make('picture.file_url'),
+            ])
+            ->filters([
+                //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
+
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -95,16 +97,16 @@ class MovieCasterResource extends Resource
     public static function getRelations(): array
     {
         return [
-
+            //
         ];
     }
 
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListMovieCasters::route('/'),
-            'create' => Pages\CreateMovieCaster::route('/create'),
-            'edit' => Pages\EditMovieCaster::route('/{record}/edit'),
+            'index' => Pages\ListCinemas::route('/'),
+            'create' => Pages\CreateCinema::route('/create'),
+            'edit' => Pages\EditCinema::route('/{record}/edit'),
         ];
     }
 }
