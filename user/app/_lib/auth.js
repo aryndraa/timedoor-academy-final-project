@@ -18,16 +18,19 @@ export const login = async (email, password) => {
   }
 }
 
-export const register = async (email, password) => {
+export const userRegister = async (email, password) => {
   try {
     const response = await apiClient.post("/auth/login", {
       email: email,
       password: password,
     });
 
+    console.log(response);
+
     if (response.data.access_token) {
       saveToStorage('adminToken', response.data.access_token, true);
     }
+
 
   } catch (err) {
     console.error(err);

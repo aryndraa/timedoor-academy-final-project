@@ -23,6 +23,7 @@ export default function RegisterForm() {
   const onSubmit = async (data) => {
     try {
       const response = await apiClient.post("/auth/register", data);
+      console.log(response);
       setMessage("Registrasi berhasil! Silakan login.");
     } catch (error) {
       setMessage("Registrasi gagal. Coba lagi.");

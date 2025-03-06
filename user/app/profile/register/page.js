@@ -1,4 +1,4 @@
-"use client"; // ✅ Pastikan ini ada karena kita menggunakan hook client-side
+"use client";
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
