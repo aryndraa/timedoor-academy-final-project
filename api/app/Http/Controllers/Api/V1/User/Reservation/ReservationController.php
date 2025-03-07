@@ -10,7 +10,6 @@ use App\Models\UserBooking;
 use App\Models\UserBookingCode;
 use App\Models\UserSeatBooking;
 use App\Models\Voucher;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
@@ -81,8 +80,6 @@ class ReservationController extends Controller
             $bookingCode->save();
 
         });
-
     }
-
 
 }

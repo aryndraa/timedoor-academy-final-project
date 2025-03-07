@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\MoviePriceResource\Pages;
 use App\Filament\Resources\MoviePriceResource\RelationManagers;
+use App\Models\CinemaStudio;
 use App\Models\MoviePrice;
 use Filament\Forms;
 use Filament\Forms\Components\Select;
@@ -31,7 +32,7 @@ class MoviePriceResource extends Resource
                     ->required(),
                 Select::make('cinema_studio_id')
                     ->options(function () {
-                        return \App\Models\CinemaStudio::with(['cinema', 'studio'])->get()
+                        return CinemaStudio::with(['cinema', 'studio'])->get()
                             ->mapWithKeys(function ($cinemaStudio) {
                                 return [$cinemaStudio->id => $cinemaStudio->cinema->name . ' - ' . $cinemaStudio->studio->name];
                             });

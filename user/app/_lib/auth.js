@@ -1,15 +1,15 @@
 import apiClient from "@/app/_utils/apiClient";
 import {hasInStorage, removeFromStorage, saveToStorage} from "@/app/_utils/storage";
 
-export const login = async (email, password) => {
+export const login = async (data) => {
   try {
     const response = await apiClient.post("/auth/login", {
-      email: email,
-      password: password,
+      email: data.email,
+      password: data.password,
     });
 
-    if (response.data.access_token) {
-      saveToStorage('adminToken', response.data.access_token, true);
+    if (response.data.data.access_token) {
+      saveToStorage('userToken', response.data.data.access_token, true);
     }
 
   } catch (err) {
@@ -18,19 +18,17 @@ export const login = async (email, password) => {
   }
 }
 
-export const userRegister = async (email, password) => {
+export const registerUser = async (data) => {
   try {
-    const response = await apiClient.post("/auth/login", {
-      email: email,
-      password: password,
+    const response = await apiClient.post("/auth/register", {
+      email: data.email,
+      password: data.password,
+      name: data.name
     });
 
-    console.log(response);
-
-    if (response.data.access_token) {
-      saveToStorage('adminToken', response.data.access_token, true);
+    if (response.data.data.access_token) {
+      saveToStorage('userToken', response.data.data.access_token, true);
     }
-
 
   } catch (err) {
     console.error(err);
@@ -53,5 +51,5 @@ export const logout = async (token) => {
 }
 
 export const checkLoginStatus = () => {
-  return hasInStorage('userToken');
+  return hasInStorage('userToken', true);
 }

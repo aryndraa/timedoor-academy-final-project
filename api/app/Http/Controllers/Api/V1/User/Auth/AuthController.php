@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\V1\User\Auth;
 use App\Http\Controllers\BaseController;
 use App\Http\Requests\Api\V1\User\Auth\LoginRequest;
 use App\Http\Requests\Api\V1\User\Auth\RegisterRequest;
+use App\Models\ProfileUser;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
 
@@ -14,6 +15,16 @@ class AuthController extends BaseController
 
         $user    = User::query()->create($request->all());
         $token   = auth('user')->tokenById($user->id);
+
+        $userProfie = ProfileUser::query()->make([
+            "name"           => $request->name,
+            "tier"           => 0,
+            "points"         => 0,
+            "total_payment" => 0,
+        ]);
+        $userProfie->user()->associate($user);
+        $userProfie->save();
+
         $success = $this->respondWithToken($token);
 
         return $this->sendResponse($success, 'User Register successfully.');

@@ -47,8 +47,10 @@ export const removeFromStorage = (key, useSession = false) => {
  * @returns {boolean} - True jika kunci ada, false jika tidak ada.
  */
 export const hasInStorage = (key, useSession = false) => {
-  if (typeof window === 'undefined') return false;
-
-  const storage = useSession ? sessionStorage : localStorage;
-  return storage.getItem(key) !== null;
+  try {
+    const storage = useSession ? sessionStorage : localStorage;
+    return storage.getItem(key) !== null;
+  } catch (error) {
+    return false;
+  }
 };

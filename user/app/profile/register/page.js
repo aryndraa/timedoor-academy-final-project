@@ -8,7 +8,7 @@ import { checkLoginStatus } from "@/app/_lib/auth";
 export default function Page() {
   const router = useRouter();
   const authorize = checkLoginStatus();
-
+  
   useEffect(() => {
     if (authorize) {
       router.replace("/profile");
@@ -16,9 +16,8 @@ export default function Page() {
   }, [authorize, router]);
 
 
-
   return (
-    <section className="py-8">
+    <section className="py-8 lg:flex justify-center ">
       <RegisterForm />
     </section>
   );
