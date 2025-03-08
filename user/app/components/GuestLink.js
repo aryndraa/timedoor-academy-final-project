@@ -1,15 +1,12 @@
 "use client"
 
 import { FaUserAlt } from "react-icons/fa";
-import {checkLoginStatus} from "../_lib/auth";
 import Link from "next/link";
-import {hasInStorage} from "@/app/_utils/storage";
 import {useAuthorize} from "@/app/_contexts/AuthorizeProvider";
 
 export const GuestLink = () => {
 
   const { authorized } = useAuthorize()
-
 
   if(authorized) {
     return (

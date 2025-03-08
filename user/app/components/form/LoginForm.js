@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import {InputField} from "@/app/components/form/InputField";
 import {login} from "@/app/_lib/auth";
+import { useRouter } from "next/navigation";
 
 const schema = yup.object().shape({
   email: yup.string().email("Email tidak valid").required("Email is required!"),
@@ -26,6 +27,7 @@ export default function LoginForm() {
       const response = await login(data);
       console.log(response);
       setMessage("Login berhasil!");
+
     } catch (error) {
       setMessage("Login gagal. Coba lagi.");
     }

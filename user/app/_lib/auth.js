@@ -36,11 +36,12 @@ export const registerUser = async (data) => {
   }
 }
 
-export const logout = async (token) => {
+export const logout = async () => {
   try{
     const response = await apiClient.delete("/auth/logout")
+
     if(response) {
-      removeFromStorage('userToken');
+      removeFromStorage('userToken', true);
     }
 
   } catch (err) {

@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('author');
             $table->dateTime('start_date');
             $table->dateTime('end_date');
+            $table->string('trailer_url')->nullable();
             $table->timestamps();
         });
     }

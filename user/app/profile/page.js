@@ -1,11 +1,15 @@
-import {checkLoginStatus} from "@/app/_lib/auth";
+"use client"
+import {useAuthorize} from "@/app/_contexts/AuthorizeProvider";
+import {LogoutBtn} from "@/app/components/form/LogoutBtn";
 
 export default function Page () {
-  const authorize = checkLoginStatus();
+  const { authorized } = useAuthorize();
+  console.log(authorized);
 
-  return authorize ? (
+  return authorized ? (
     <h1>
       Profile
+      <LogoutBtn/>
     </h1>
   ) : (
     <h1>

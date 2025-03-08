@@ -9,12 +9,9 @@ export default function Page() {
   const router = useRouter();
   const authorize = checkLoginStatus();
 
-  useEffect(() => {
-    if (authorize) {
-      router.replace("/profile");
-    }
-  }, [authorize, router]);
-
+  if (authorize) {
+    router.replace("/profile");
+  }
 
   return (
     <section className="py-8 lg:flex justify-center ">

@@ -16,6 +16,7 @@ class Movie extends Model
         'language',
         'synopsis',
         'author',
+        'trailer_url',
         'start_date',
         'end_date',
     ];

@@ -41,6 +41,7 @@ class MovieResource extends Resource
             TextInput::make('language')
                 ->required()
                 ->maxLength(100),
+
             Textarea::make('synopsis')
                 ->required()
                 ->columnSpanFull(),
@@ -51,8 +52,10 @@ class MovieResource extends Resource
                 ->required(),
             DatePicker::make('end_date')
                 ->required(),
-            FileUpload::make('cover')
+            TextInput::make('trailer_url')
                 ->required()
+                ->maxLength(250),
+            FileUpload::make('cover')
                 ->afterStateUpdated(fn ( $state, ?Model $record) => self::saveCover($record, $state)),
         ]);
     }
