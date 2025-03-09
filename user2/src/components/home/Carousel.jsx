@@ -13,7 +13,7 @@ export const Carousel = () => {
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
-      autoplay={{ delay: 3000, disableOnInteraction: false }}
+      autoplay={{ delay: 5000, disableOnInteraction: false }}
       loop={true}
       className="w-full "
     >

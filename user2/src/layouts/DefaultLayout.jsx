@@ -5,6 +5,8 @@ export const DefaultLayout = ({children}) => {
   return (
     <>
       <html lang="en">
+        <head>
+        </head>
         <body
           className={`antialiased overflow-x-hidden bg-dark-300 pb-32 lg:pb-12`}
         >
