@@ -20,6 +20,24 @@ export function Home() {
           <CoverCard/>
         </div>
       </section>
+      <section className="mb-12 mx-20 pb-12 border-b border-border/40">
+        <SectionTitle title="Now Playing" />
+        <div className="grid grid-cols-5 gap-6 gap-y-12 mt-6">
+          <MovieCard/>
+          <MovieCard/>
+          <MovieCard/>
+          <MovieCard/>
+          <MovieCard/>
+          <MovieCard/>
+          <MovieCard/>
+          <MovieCard/>
+          <MovieCard/>
+          <div></div>
+        </div>
+      </section>
+      <section>
+
+      </section>
     </>
   )
 }
