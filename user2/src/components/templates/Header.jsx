@@ -4,8 +4,8 @@ import { Navbar } from "./navigation/Navbar"
 
 export const Header = () => {
   return (
-    <header className=" flex flex-col lg:bg-dark-200 lg:mx-16 lg:my-5 rounded-full">
-      <div className="flex justify-between items-center py-4 px-3 lg:px-12 ">
+    <header className=" flex flex-col lg:bg-dark-200">
+      <div className="flex justify-between items-center py-4 px-3 lg:px-20 ">
         <Logo/>
         <div className="hidden lg:flex">
           <Navbar/>

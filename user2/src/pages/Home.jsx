@@ -1,7 +1,12 @@
+import {CarouselItem} from "../components/home/CarouselItem.jsx";
+import {Carousel} from "../components/home/Carousel.jsx";
+
 export function Home() {
   return (
     <>
-      <h1>Home Page</h1>
+      <section>
+        <Carousel/>
+      </section>
     </>
   )
 }
