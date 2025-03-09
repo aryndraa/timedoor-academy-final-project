@@ -3,6 +3,7 @@ import {Carousel} from "../components/home/Carousel.jsx";
 import {SectionTitle} from "../components/SectionTitle.jsx";
 import {CoverCard} from "../components/cards/CoverCard.jsx";
 import {MovieCard} from "../components/cards/MovieCard.jsx";
+import {ViewMoreCard} from "../components/cards/ViewMoreCard.jsx";
 
 export function Home() {
   return (
@@ -32,7 +33,7 @@ export function Home() {
           <MovieCard/>
           <MovieCard/>
           <MovieCard/>
-          <div></div>
+          <ViewMoreCard/>
         </div>
       </section>
       <section>
