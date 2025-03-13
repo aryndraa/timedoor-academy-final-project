@@ -4,6 +4,7 @@ import {SectionTitle} from "../components/SectionTitle.jsx";
 import {CoverCard} from "../components/cards/CoverCard.jsx";
 import {MovieCard} from "../components/cards/MovieCard.jsx";
 import {ViewMoreCard} from "../components/cards/ViewMoreCard.jsx";
+import {Link} from "react-router-dom";
 
 export function Home() {
   return (
@@ -22,7 +23,10 @@ export function Home() {
         </div>
       </section>
       <section className="mb-6 lg:mb-12 mx-3 lg:mx-20  lg:pb-12 lg:border-b border-border/40">
-        <SectionTitle title="Now Playing"/>
+        <div className="flex justify-between items-center">
+          <SectionTitle title="Now Playings"/>
+          <Link to="/movies" className="text-primary lg:hidden">See more</Link>
+        </div>
         <div className="flex overflow-scroll lg:grid grid-cols-5 gap-2 lg:gap-6 gap-y-6 lg:gap-y-12 mt-4 lg:mt-6">
           <MovieCard/>
           <MovieCard/>
@@ -37,7 +41,10 @@ export function Home() {
         </div>
       </section>
       <section className="mb-6 lg:mb-12 mx-3 lg:mx-20 pb-12">
-        <SectionTitle title="Upcoming Movies"/>
+        <div className="flex justify-between items-center ">
+          <SectionTitle title="Upcoming Movies"/>
+          <Link to="/movies" className="text-primary lg:hidden">See more</Link>
+        </div>
         <div className="flex overflow-scroll lg:grid grid-cols-5 gap-2 lg:gap-6 gap-y-12 mt-4 lg:mt-6">
           <MovieCard/>
           <MovieCard/>
