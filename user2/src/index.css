@@ -62,6 +62,16 @@ body {
   left: -42% !important;
 }
 
+@media (max-width: 768px) {
+  .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    left: 0% !important;
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    display: none !important;
+  }
+}
+
 .swiper-pagination-bullet {
   background: #fff !important;
 }

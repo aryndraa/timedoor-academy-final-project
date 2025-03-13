@@ -12,7 +12,7 @@ export function Home() {
         <Carousel/>
       </section>
       <section className="mb-12 mx-20 pb-12  border-b border-border/40">
-        <SectionTitle title="most watched movies" />
+        <SectionTitle title="most watched movies"/>
         <div className="grid grid-cols-5 gap-6 mt-6">
           <CoverCard/>
           <CoverCard/>
@@ -22,7 +22,7 @@ export function Home() {
         </div>
       </section>
       <section className="mb-12 mx-20 pb-12 border-b border-border/40">
-        <SectionTitle title="Now Playing" />
+        <SectionTitle title="Now Playing"/>
         <div className="grid grid-cols-5 gap-6 gap-y-12 mt-6">
           <MovieCard/>
           <MovieCard/>
@@ -33,11 +33,18 @@ export function Home() {
           <MovieCard/>
           <MovieCard/>
           <MovieCard/>
-          <ViewMoreCard/>
+          <ViewMoreCard link={"/movies/"}/>
         </div>
       </section>
-      <section>
-
+      <section className="mb-12 mx-20 pb-12">
+        <SectionTitle title="Upcoming Movies"/>
+        <div className="grid grid-cols-5 gap-6 gap-y-12 mt-6">
+          <MovieCard/>
+          <MovieCard/>
+          <MovieCard/>
+          <MovieCard/>
+          <ViewMoreCard link={"/movies/upcoming"}/>
+        </div>
       </section>
     </>
   )

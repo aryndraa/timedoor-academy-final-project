@@ -4,7 +4,7 @@ import { FaPlay } from "react-icons/fa";
 export const CarouselItem = () => {
   return (
     <div className="max-h-[70vh] flex ">
-      <div className="flex-1 pl-20 max-w-lg bg-gradient-to-r from-dark-300 to-dark-300/0 flex-col flex justify-center ">
+      <div className=" hidden lg:flex flex-1 pl-20 max-w-lg bg-gradient-to-r from-dark-300 to-dark-300/0 flex-col  justify-center ">
         <div className="mb-6">
           <h1 className="text-3xl leading-[1.5] font-semibold mb-2 text-white">Captain America: Brave New World</h1>
           <div className="text-text-200/80 mb-2">
@@ -22,7 +22,7 @@ export const CarouselItem = () => {
         <img
           src="https://static1.cbrimages.com/wordpress/wp-content/uploads/sharedimages/2024/12/captain-america-brave-new-world-poster.jpg"
           alt="a"
-          className="h-[70vh] object-cover w-full"
+          className="h-[30vh] lg:h-[70vh] object-cover w-full"
         />
       </div>
     </div>
