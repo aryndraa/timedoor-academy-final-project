@@ -17,12 +17,12 @@ export const CarouselItem = () => {
           <Link to="/movies/:id" className="flex px-4 py-3 gap-4 items-center border border-primary rounded-lg font-semibold text-primary"><FaPlay/> Watch Trailer</Link>
         </div>
       </div>
-      <div className="relative flex-1 ">
+      <div className="relative flex-1 h-[28vh] lg:h-[70vh]">
         <div className="absolute bg-gradient-to-r from-dark-300 via-dark-300/0 to-transparent inset-0"></div>
         <img
           src="https://static1.cbrimages.com/wordpress/wp-content/uploads/sharedimages/2024/12/captain-america-brave-new-world-poster.jpg"
           alt="a"
-          className="h-[30vh] lg:h-[70vh] object-cover w-full"
+          className="object-cover h-full w-full"
         />
       </div>
     </div>
