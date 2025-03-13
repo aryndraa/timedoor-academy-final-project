@@ -37,6 +37,12 @@ class CinemaResource extends Resource
                 TextInput::make('address')
                     ->required()
                     ->maxLength(500),
+                TextInput::make('country')
+                    ->required()
+                    ->maxLength(500),
+                TextInput::make('province')
+                    ->required()
+                    ->maxLength(500),
                 TimePicker::make('opening_time')
                     ->required(),
                 TimePicker::make('closing_time')

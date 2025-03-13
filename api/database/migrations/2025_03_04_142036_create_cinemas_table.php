@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('address');
+            $table->string('country');
+            $table->string('province');
             $table->time('opening_time');
             $table->time('closing_time');
             $table->timestamps();

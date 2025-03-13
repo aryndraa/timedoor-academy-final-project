@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\V1\User\Auth\AuthController;
 use App\Http\Controllers\Api\V1\User\Movie\MovieController;
 use App\Http\Controllers\Api\V1\User\Reservation\ReservationController;
+use App\Http\Controllers\Api\V1\User\Ticket\TicketController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('user/')
@@ -31,8 +32,18 @@ Route::prefix('user/')
                         ->group(function () {
                             Route::post('/reservation', 'reservation')->name('reservation');
                         });
+
                 });
             });
+
+        Route::middleware(['auth:user'])->group(function () {
+            Route::controller(TicketController::class)
+                ->prefix('/tickets/')
+                ->name('tickets.')
+                ->group(function () {
+                    Route::get('/', 'index')->name('index');
+                });
+        });
 
 
 

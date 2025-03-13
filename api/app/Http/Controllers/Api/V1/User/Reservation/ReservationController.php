@@ -66,7 +66,7 @@ class ReservationController extends Controller
                     'column' => $seat['column'],
                 ]);
 
-                $bookingSeats->userBookings()->associate($booking->id);
+                $bookingSeats->userBooking()->associate($booking->id);
 
                 $bookingSeats->save();
             }

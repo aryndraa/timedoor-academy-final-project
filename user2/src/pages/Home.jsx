@@ -14,7 +14,7 @@ export function Home() {
       </section>
       <section className="mb-4 lg:mb-12 mx-3 lg:mx-20 lg:pb-12  lg:border-b border-border/40">
         <SectionTitle title="most watched movies"/>
-        <div className="flex overflow-scroll lg:grid grid-cols-5 gap-2 lg:gap-6 mt-4 lg:mt-6">
+        <div className="flex overflow-scroll lg:overflow-hidden lg:grid grid-cols-5 gap-2 lg:gap-6 mt-4 lg:mt-8">
           <CoverCard/>
           <CoverCard/>
           <CoverCard/>
@@ -27,7 +27,7 @@ export function Home() {
           <SectionTitle title="Now Playings"/>
           <Link to="/movies" className="text-primary lg:hidden">See more</Link>
         </div>
-        <div className="flex overflow-scroll lg:grid grid-cols-5 gap-2 lg:gap-6 gap-y-6 lg:gap-y-12 mt-4 lg:mt-6">
+        <div className="flex overflow-scroll lg:overflow-hidden lg:grid grid-cols-5 gap-2 lg:gap-6 gap-y-6 lg:gap-y-12 mt-4 lg:mt-8">
           <MovieCard/>
           <MovieCard/>
           <MovieCard/>
@@ -45,7 +45,7 @@ export function Home() {
           <SectionTitle title="Upcoming Movies"/>
           <Link to="/movies" className="text-primary lg:hidden">See more</Link>
         </div>
-        <div className="flex overflow-scroll lg:grid grid-cols-5 gap-2 lg:gap-6 gap-y-12 mt-4 lg:mt-6">
+        <div className="flex overflow-scroll lg:overflow-hidden lg:grid grid-cols-5 gap-2 lg:gap-6 gap-y-12 mt-4 lg:mt-8">
           <MovieCard/>
           <MovieCard/>
           <MovieCard/>
