@@ -4,7 +4,7 @@ import {TicketInfo} from "../my-ticket/TicketInfo.jsx";
 import { FaMapLocationDot } from "react-icons/fa6";
 import {Link} from "react-router-dom";
 
-export const TicketCard = () => {
+export const TicketCard = ({payment = false}) => {
   return (
     <>
       <div
@@ -56,11 +56,15 @@ export const TicketCard = () => {
               </div>
             </div>
 
-            <div className="hidden lg:flex gap-2 lg:gap-4">
+            <div className="hidden lg:flex  gap-2 lg:gap-4 ">
               <Link to="/"
-                    className="text-sm lg:text-base py-1 lg:p-2 px-2 lg:px-4 border border-border/40 text-text-400">Movie</Link>
+                    className={`text-sm lg:text-base py-1 lg:p-2 px-2 lg:px-4 border border-border/40 text-text-400 ${
+                      payment ? "hidden" : "lg:flex"
+                    }`}>Movie</Link>
               <Link to="/"
-                    className="text-sm lg:text-base py-1 lg:p-2 px-2 lg:px-4 border border-border/40 text-text-400">Cinema</Link>
+                    className={`text-sm lg:text-base py-1 lg:p-2 px-2 lg:px-4 border border-border/40 text-text-400 ${
+                      payment ? "hidden" : "lg:flex"
+                    }`}>Cinema</Link>
               <Link to="/"
                     className="text-sm lg:text-base py-1 lg:p-2 px-2 lg:px-4 border border-primary bg-primary text-dark-300 font-semibold">Detail</Link>
             </div>
@@ -92,7 +96,7 @@ export const TicketCard = () => {
 
       <Link
         to="/"
-        className="flex gap-4 lg:gap-8 p-3 lg:p-8  border  border-border/20 bg-dark-250 hover:bg-dark-200 transition  ease-in-out">
+        className="flex lg:hidden gap-4 lg:gap-8 p-3 lg:p-8  border  border-border/20 bg-dark-250 hover:bg-dark-200 transition  ease-in-out">
         <img
           src="https://i.pinimg.com/736x/de/9a/e7/de9ae780aae37dbf947a56ad63ffd956.jpg"
           alt=""

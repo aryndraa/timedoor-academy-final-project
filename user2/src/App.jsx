@@ -6,6 +6,7 @@ import {Movies} from "./pages/Movies.jsx";
 import {UpcomingMovies} from "./pages/UpcomingMovies.jsx";
 import {Cinemas} from "./pages/Cinemas.jsx";
 import {Profile} from "./pages/Profile.jsx";
+import {ShoppingHistory} from "./pages/ShoppingHistory.jsx";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
                 <Route path="/movies/upcoming" element={<UpcomingMovies />} />
                 <Route path="/cinemas" element={<Cinemas />} />
                 <Route path="/profile" element={<Profile />} />
+                <Route path="/profile/shopping-history" element={<ShoppingHistory />} />
               </Routes>
             </DefaultLayout>
           } />

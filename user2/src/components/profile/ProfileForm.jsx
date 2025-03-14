@@ -10,7 +10,7 @@ export const ProfileForm = () => {
           <div className="p-6 w-fit bg-dark-100 text-4xl rounded-full">
             <FaUser/>
           </div>
-          <button className="px-4 py-3 font-medium  h-fit bg-dark-100 rounded-lg">Update Photo Profile</button>
+          <button className="px-4 py-3 font-medium  h-fit bg-dark-100 active:bg-dark-100/20 transition ease-in-out rounded-lg">Update Photo Profile</button>
         </div>
 
         <h3 className="text-text-400">First Name</h3>
