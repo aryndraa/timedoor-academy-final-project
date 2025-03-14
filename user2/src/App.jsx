@@ -11,6 +11,7 @@ import {EditProfile} from "./pages/EditProfile.jsx";
 import {TicketDetail} from "./pages/TicketDetail.jsx";
 import {MovieDetail} from "./pages/MovieDetail.jsx";
 import {MovieBooking} from "./pages/MovieBooking.jsx";
+import {MovieReservation} from "./pages/MovieReservation.jsx";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/movies/upcoming" element={<UpcomingMovies />} />
                 <Route path="/movies/:id" element={<MovieDetail />} />
                 <Route path="/movies/:id/booking" element={<MovieBooking />} />
+                <Route path="/movies/:id/reservation" element={<MovieReservation />} />
                 <Route path="/cinemas" element={<Cinemas />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/profile/edit" element={<EditProfile />} />
