@@ -65,7 +65,7 @@ export const TicketCard = ({payment = false}) => {
                     className={`text-sm lg:text-base py-1 lg:p-2 px-2 lg:px-4 border border-border/40 text-text-400 ${
                       payment ? "hidden" : "lg:flex"
                     }`}>Cinema</Link>
-              <Link to="/"
+              <Link to="/my-tickets/1"
                     className="text-sm lg:text-base py-1 lg:p-2 px-2 lg:px-4 border border-primary bg-primary text-dark-300 font-semibold">Detail</Link>
             </div>
           </div>

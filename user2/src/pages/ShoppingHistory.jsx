@@ -19,7 +19,7 @@ export const ShoppingHistory = () => {
           </section>
         </ProfileLayout>
       </div>
-      <div>
+      <div className="lg:hidden">
         <section className="mt-6 mx-3">
           <Link to="/profile" className="flex gap-2 mb-4 items-center text-xl">
             <IoArrowBack className="text-2xl"/> Back

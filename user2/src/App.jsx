@@ -8,6 +8,7 @@ import {Cinemas} from "./pages/Cinemas.jsx";
 import {Profile} from "./pages/Profile.jsx";
 import {ShoppingHistory} from "./pages/ShoppingHistory.jsx";
 import {EditProfile} from "./pages/EditProfile.jsx";
+import {TicketDetail} from "./pages/TicketDetail.jsx";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/my-tickets" element={<MyTickets />} />
+                <Route path="/my-tickets/:id" element={<TicketDetail />} />
                 <Route path="/movies" element={<Movies />} />
                 <Route path="/movies/upcoming" element={<UpcomingMovies />} />
                 <Route path="/cinemas" element={<Cinemas />} />
