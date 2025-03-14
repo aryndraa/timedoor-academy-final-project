@@ -9,7 +9,9 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
 class ProfileUser extends Model
 {
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
+        'phone',
         'tier',
         'points',
         'total_payment'
