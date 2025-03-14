@@ -1,5 +1,6 @@
 import {SectionTitle} from "../components/SectionTitle.jsx";
 import {LocationDropdown} from "../components/cinemas/LocationDropdown.jsx";
+import {CinemaCard} from "../components/cards/CinemaCard.jsx";
 
 export function Cinemas() {
   return (
@@ -8,6 +9,12 @@ export function Cinemas() {
         <div className="flex items-center justify-between">
           <SectionTitle title="All Cinemas" />
           <LocationDropdown/>
+        </div>
+        <div className="grid grid-cols-2 gap-8 mt-8">
+          <CinemaCard/>
+          <CinemaCard/>
+          <CinemaCard/>
+          <CinemaCard/>
         </div>
       </section>
     </>

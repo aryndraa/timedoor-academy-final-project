@@ -22,12 +22,12 @@ export function LocationDropdown() {
       <button
         className="py-3 px-5 bg-dark-200 flex gap-3 items-center rounded-full capitalize font-medium"
         onClick={() => {
-          setOpenSetCountry(true)
+          setOpenSetCountry(!openSetCountry);
           setCountry("all")
           setProvince("all")
         }}
       >
-        <FaLocationDot />{" "}
+        <FaLocationDot />
         {province !== "all"
           ? `${province}, ${country}`
           : "Pilih Lokasi"}
