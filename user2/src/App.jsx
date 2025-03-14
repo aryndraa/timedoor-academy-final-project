@@ -5,6 +5,7 @@ import {MyTickets} from "./pages/MyTickets.jsx";
 import {Movies} from "./pages/Movies.jsx";
 import {UpcomingMovies} from "./pages/UpcomingMovies.jsx";
 import {Cinemas} from "./pages/Cinemas.jsx";
+import {Profile} from "./pages/Profile.jsx";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/movies" element={<Movies />} />
                 <Route path="/movies/upcoming" element={<UpcomingMovies />} />
                 <Route path="/cinemas" element={<Cinemas />} />
+                <Route path="/profile" element={<Profile />} />
               </Routes>
             </DefaultLayout>
           } />
