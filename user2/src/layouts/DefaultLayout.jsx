@@ -4,7 +4,7 @@ import {BottomBar} from "../components/templates/navigation/BottomBar.jsx";
 export const DefaultLayout = ({children}) => {
   return (
         <div
-          className={`antialiased overflow-x-hidden bg-dark-300 pb-32 lg:pb-12`}
+          className={`antialiased overflow-x-idden bg-dark-300 pb-32 lg:pb-12`}
         >
           <Header/>
 
