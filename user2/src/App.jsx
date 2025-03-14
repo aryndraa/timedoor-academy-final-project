@@ -4,6 +4,7 @@ import {Home} from "./pages/Home.jsx";
 import {MyTickets} from "./pages/MyTickets.jsx";
 import {Movies} from "./pages/Movies.jsx";
 import {UpcomingMovies} from "./pages/UpcomingMovies.jsx";
+import {Cinemas} from "./pages/Cinemas.jsx";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/my-tickets" element={<MyTickets />} />
                 <Route path="/movies" element={<Movies />} />
                 <Route path="/movies/upcoming" element={<UpcomingMovies />} />
+                <Route path="/cinemas" element={<Cinemas />} />
               </Routes>
             </DefaultLayout>
           } />

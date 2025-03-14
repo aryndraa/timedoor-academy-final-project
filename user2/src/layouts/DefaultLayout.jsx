@@ -3,11 +3,7 @@ import {BottomBar} from "../components/templates/navigation/BottomBar.jsx";
 
 export const DefaultLayout = ({children}) => {
   return (
-    <>
-      <html lang="en">
-        <head>
-        </head>
-        <body
+        <div
           className={`antialiased overflow-x-hidden bg-dark-300 pb-32 lg:pb-12`}
         >
           <Header/>
@@ -17,8 +13,6 @@ export const DefaultLayout = ({children}) => {
           </main>
 
           <BottomBar/>
-        </body>
-      </html>
-    </>
+        </div>
   )
 }
