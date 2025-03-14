@@ -28,7 +28,7 @@ export function LocationDropdown() {
           : "Pilih Lokasi"}
       </button>
 
-      <div className="absolute right-0 left-0 mt-2 p-2 pb-4 lg:p-0 bg-dark-300 lg:mt-4 flex  flex-col lg:flex-row-reverse gap-2">
+      <div className="absolute right-0 left-0 mt-2 p-2 pb-4 lg:p-0 bg-dark-300 lg:bg-transparent lg:mt-4 flex  flex-col lg:flex-row-reverse gap-2">
         {
           openSetCountry ?
             <div>

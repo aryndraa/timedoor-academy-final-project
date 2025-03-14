@@ -8,18 +8,18 @@ import {BottomBook} from "../components/movieDetail/BottomBook.jsx";
 export function MovieDetail() {
   return (
     <>
-      <section className='lg:mx-20'>
+      <section className='mx-3 lg:mx-20'>
 
         {/* Mobile View */}
         <div className="lg:hidden">
           <div className="lg:hidden">
             <Link to={"/movies"}
-                  className="absolute left-0 right-0 top-0  text-3xl p-4 py-8  flex bg-gradient-to-b from-dark-300 to-dark-300/0 text-white  w-full ">
+                  className="absolute left-0 right-0 top-0  text-3xl p-4 py-8  flex bg-dark-300 text-white  w-full ">
               <IoArrowBack/>
             </Link>
           </div>
           <div className="relative z-10">
-            <div className="flex flex-col mt-2">
+            <div className="flex flex-col mt-4">
               <div className="flex flex-col items-center mb-4">
                 <img src="https://i.pinimg.com/736x/de/9a/e7/de9ae780aae37dbf947a56ad63ffd956.jpg"
                      alt="cover"
