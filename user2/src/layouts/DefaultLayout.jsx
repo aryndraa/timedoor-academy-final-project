@@ -8,7 +8,7 @@ export const DefaultLayout = ({children}) => {
         >
           <Header/>
 
-          <main className="flex flex-col  text-text-200">
+          <main className="flex flex-col min-h-[60vh] lg:min-h-screen  text-text-200">
             {children}
           </main>
 
