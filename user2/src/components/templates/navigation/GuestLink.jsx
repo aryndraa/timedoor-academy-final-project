@@ -22,9 +22,9 @@ export const GuestLink = () => {
   return  (
     <div className="flex items-center gap-2 lg:gap-4 ">
       <Link className="px-4 py-2 border border-primary text-primary rounded-lg text-sm font-semibold"
-            href={'/profile/login'}>Login</Link>
+            to='/login'>Login</Link>
       <Link className="px-4 py-2 border border-primary text-dark-300 rounded-lg text-sm font-semibold bg-primary"
-            href={'/profile/register'}>Register</Link>
+            to='/register'>Register</Link>
     </div>
   )
 }
