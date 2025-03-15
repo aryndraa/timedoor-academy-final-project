@@ -15,11 +15,15 @@ import { MovieReservation } from "./pages/MovieReservation.jsx";
 import { MoviePayment } from "./pages/MoviePayment.jsx";
 import { Register } from "./pages/Register.jsx";
 import AuthMiddleware from "./middleware/AuthMiddleware.jsx";
+import {Login} from "./pages/Login.jsx";
+import auth from "./api/auth.js";
 
 function App() {
+  const hasLogin = auth.checkLoginStatus();
+
   return (
     <BrowserRouter>
-      <AuthMiddleware isAuth={false} excludeRoutes={[
+      <AuthMiddleware isAuth={hasLogin} excludeRoutes={[
         "/",
         "/my-tickets",
         "/movies",
@@ -45,6 +49,7 @@ function App() {
             <Route path="/profile/edit" element={<EditProfile />} />
             <Route path="/profile/shopping-history" element={<ShoppingHistory />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </DefaultLayout>
       </AuthMiddleware>
