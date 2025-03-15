@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class MoviePrice extends Model
 {
@@ -19,5 +20,9 @@ class MoviePrice extends Model
 
     public function cinemaStudio(): BelongsTo {
         return $this->belongsTo(CinemaStudio::class);
+    }
+
+    public function movieSchedules(): HasMany {
+        return $this->hasMany(MovieSchedule::class);
     }
 }

@@ -28,6 +28,8 @@ class MovieCasterResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
+    protected static ?string $navigationGroup = 'Movies';
+
     public static function form(Form $form): Form
     {
         return $form->schema([

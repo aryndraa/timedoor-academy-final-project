@@ -17,7 +17,9 @@ class AuthController extends BaseController
         $token   = auth('user')->tokenById($user->id);
 
         $userProfie = ProfileUser::query()->make([
-            "name"           => $request->name,
+            "first_name"     => $request->first_name,
+            "last_name"      => $request->last_name,
+            "phone"          => "",
             "tier"           => 0,
             "points"         => 0,
             "total_payment" => 0,

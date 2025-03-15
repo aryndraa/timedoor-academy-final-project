@@ -22,6 +22,8 @@ class CinemaStudioResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-play-circle';
 
+    protected static ?string $navigationGroup = 'Cinema';
+
 
     public static function form(Form $form): Form
     {

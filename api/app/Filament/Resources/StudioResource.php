@@ -22,6 +22,9 @@ class StudioResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-play';
 
+    protected static ?string $navigationGroup = 'Cinema';
+
+
     public static function form(Form $form): Form
     {
         return $form

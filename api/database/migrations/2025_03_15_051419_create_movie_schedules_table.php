@@ -11,15 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('profile_users', function (Blueprint $table) {
+        Schema::create('movie_schedules', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users');
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('phone');
-            $table->integer('tier');
-            $table->integer('points');
-            $table->integer('total_payment');
+            $table->foreignId('movie_price_id')->constrained('movie_prices');
+            $table->dateTime('time');
             $table->timestamps();
         });
     }
@@ -29,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('profile_users');
+        Schema::dropIfExists('movie_schedules');
     }
 };

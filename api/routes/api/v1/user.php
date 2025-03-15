@@ -24,6 +24,7 @@ Route::prefix('user/')
             ->group(function () {
                 Route::get('', 'index')->name('index');
                 Route::get('/{movie}', 'show')->name('show');
+                Route::get('/{movie}/schedule', 'schedule')->name('schedule');
 
                 Route::middleware(['auth:user'])->group(function () {
                     Route::controller(ReservationController::class)

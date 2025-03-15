@@ -23,6 +23,8 @@ class MovieResource extends Resource
     protected static ?string $model = Movie::class;
     protected static ?string $navigationIcon = 'heroicon-o-film';
 
+    protected static ?string $navigationGroup = 'Movies';
+
     public static function form(Forms\Form $form): Forms\Form
     {
         return $form->schema([

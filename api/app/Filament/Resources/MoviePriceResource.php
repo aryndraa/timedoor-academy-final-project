@@ -23,6 +23,8 @@ class MoviePriceResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-currency-dollar';
 
+    protected static ?string $navigationGroup = 'Movies';
+
     public static function form(Form $form): Form
     {
         return $form

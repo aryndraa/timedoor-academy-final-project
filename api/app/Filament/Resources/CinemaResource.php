@@ -27,6 +27,9 @@ class CinemaResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-building-office';
 
+    protected static ?string $navigationGroup = 'Cinema';
+
+
     public static function form(Form $form): Form
     {
         return $form
