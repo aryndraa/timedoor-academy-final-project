@@ -1,7 +1,6 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import auth from "./../api/auth.js";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -23,25 +22,7 @@ const LoginForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false); // Tambahkan state
 
   const submit = async (data) => {
-    setIsSubmitting(true); // Set tombol ke loading state
-
-    try {
-      const userData = await auth.login({ request: data });
-
-      console.log(userData);
-
-      if (userData?.data?.access_token) {
-        alert("Login berhasil!");
-        navigate("/");
-      } else {
-        alert("Login gagal, coba lagi.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("Terjadi kesalahan saat login.");
-    } finally {
-      setIsSubmitting(false); // Pastikan tombol bisa ditekan lagi
-    }
+    setIsSubmitting(true); 
   };
 
   return (

@@ -1,7 +1,6 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import auth from "./../../api/auth.js";
 import {useNavigate} from "react-router-dom";
 
 const schema = yup.object().shape({
@@ -24,19 +23,7 @@ const RegisterForm = () => {
 
 
   const submit = async (data) => {
-    try {
-      const userData = await auth.registerUser({ request: data });
-
-      if (userData?.data?.access_token) {
-        alert("Registrasi berhasil!");
-        navigate("/");
-      } else {
-        alert("Registrasi gagal, coba lagi.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("Terjadi kesalahan saat registrasi.");
-    }
+    
   };
 
   return (

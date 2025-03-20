@@ -7,10 +7,10 @@ export const GuestLink = () => {
       <Link to="/profile" className="flex items-center gap-2 lg:gap-4">
         <div className="text-right text-white">
           <h2 className="text-sm lg:text-base leading-[1.5] font-semibold">
-            {userData.first_name} {userData.last_name}
+            Mahendra Arya
           </h2>
           <p className="text-[11px] lg:text-xs text-white/80">
-            {userData.email}
+            arycoder1102@gmail.com
           </p>
         </div>
         <div className="p-3 text-lg lg:text-xl bg-dark-100 text-white rounded-full">
@@ -18,8 +18,7 @@ export const GuestLink = () => {
         </div>
       </Link>
     );
-  }
-
+  
   // return (
   //   <div className="flex items-center gap-2 lg:gap-4">
   //     <Link
@@ -36,4 +35,5 @@ export const GuestLink = () => {
   //     </Link>
   //   </div>
   // );
+
 };
