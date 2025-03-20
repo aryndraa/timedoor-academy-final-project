@@ -1,5 +1,5 @@
-import {SectionTitle} from "../components/SectionTitle.jsx";
-import {TicketCard} from "../components/cards/TicketCard.jsx";
+import {SectionTitle} from "../../components/SectionTitle.jsx";
+import {TicketCard} from "../../components/cards/TicketCard.jsx";
 
 export function MyTickets() {
   return (

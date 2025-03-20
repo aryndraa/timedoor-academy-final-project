@@ -1,8 +1,8 @@
-import {BackBar} from "../components/movieBooking/BackBar.jsx";
+import {BackBar} from "../../components/movieBooking/BackBar.jsx";
 import {Link} from "react-router-dom";
-import {BottomBarCover} from "../components/movieBooking/BottomBarCover.jsx";
-import {ReservationSeats} from "../components/movieReservation/ReservationSeats.jsx";
-import {ReservationTime} from "../components/movieReservation/ReservationTime.jsx";
+import {BottomBarCover} from "../../components/movieBooking/BottomBarCover.jsx";
+import {ReservationSeats} from "../../components/movieReservation/ReservationSeats.jsx";
+import {ReservationTime} from "../../components/movieReservation/ReservationTime.jsx";
 
 export function MovieReservation() {
   return (
@@ -16,7 +16,7 @@ export function MovieReservation() {
           <div className='mb-6'>
             <ReservationSeats/>
           </div>
-          <Link to={"/movies/1/booking/payment"}
+          <Link to={"/movie/1/booking/payment"}
                 className='bg-primary flex justify-center w-full p-4 rounded-lg text-dark-300 font-bold text-lg '>Booking</Link>
         </div>
         <BottomBarCover/>

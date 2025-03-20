@@ -1,8 +1,8 @@
-import {BackBar} from "../components/movieBooking/BackBar.jsx";
-import {BottomBarCover} from "../components/movieBooking/BottomBarCover.jsx";
-import {TicketPaymentButton} from "../components/moviePayment/TicketPaymentButton.jsx";
-import {TicketPaymentDetail} from "../components/moviePayment/TicketPaymentDetail.jsx";
-import {PricingPaymentDetail} from "../components/moviePayment/PricingPaymentDetail.jsx";
+import {BackBar} from "../../components/movieBooking/BackBar.jsx";
+import {BottomBarCover} from "../../components/movieBooking/BottomBarCover.jsx";
+import {TicketPaymentButton} from "../../components/moviePayment/TicketPaymentButton.jsx";
+import {TicketPaymentDetail} from "../../components/moviePayment/TicketPaymentDetail.jsx";
+import {PricingPaymentDetail} from "../../components/moviePayment/PricingPaymentDetail.jsx";
 
 export function MoviePayment() {
   return (

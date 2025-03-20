@@ -1,8 +1,8 @@
-import {ProfileLayout} from "../layouts/ProfileLayout.jsx";
-import {SectionTitle} from "../components/SectionTitle.jsx";
-import {ProfileForm} from "../components/profile/ProfileForm.jsx";
-import {ContactForm} from "../components/profile/ContactForm.jsx";
-import {TicketCard} from "../components/cards/TicketCard.jsx";
+import {ProfileLayout} from "../../layouts/ProfileLayout.jsx";
+import {SectionTitle} from "../../components/SectionTitle.jsx";
+import {ProfileForm} from "../../components/profile/ProfileForm.jsx";
+import {ContactForm} from "../../components/profile/ContactForm.jsx";
+import {TicketCard} from "../../components/cards/TicketCard.jsx";
 import {IoArrowBack} from "react-icons/io5";
 import {Link} from "react-router-dom";
 
@@ -21,7 +21,7 @@ export const ShoppingHistory = () => {
       </div>
       <div className="lg:hidden">
         <section className="mt-6 mx-3">
-          <Link to="/profile" className="flex gap-2 mb-4 items-center text-xl">
+          <Link to="/profile/Profile" className="flex gap-2 mb-4 items-center text-xl">
             <IoArrowBack className="text-2xl"/> Back
           </Link>
           <SectionTitle title="Shopping History"/>

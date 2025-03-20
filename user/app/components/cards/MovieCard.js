@@ -3,7 +3,7 @@ import { FaRegClock } from "react-icons/fa";
 
 export const MovieCard = () => {
   return (
-    <Link href={"/movies/1"}>
+    <Link href={"/movie/1"}>
       <div className="relative mb-3 ">
         <img
           src="https://i.pinimg.com/736x/de/9a/e7/de9ae780aae37dbf947a56ad63ffd956.jpg"

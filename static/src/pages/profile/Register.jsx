@@ -1,4 +1,4 @@
-import RegisterForm from "../components/register/RegisterForm.jsx";
+import RegisterForm from "../../components/register/RegisterForm.jsx";
 
 export const Register = () => {
   return (

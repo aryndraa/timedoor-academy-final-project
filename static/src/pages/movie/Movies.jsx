@@ -1,5 +1,5 @@
-import {TabBar} from "../components/movies/TabBar.jsx";
-import {MovieCard} from "../components/cards/MovieCard.jsx";
+import {TabBar} from "../../components/movies/TabBar.jsx";
+import {MovieCard} from "../../components/cards/MovieCard.jsx";
 
 export function Movies() {
 

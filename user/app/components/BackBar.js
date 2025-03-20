@@ -4,7 +4,7 @@ import { IoArrowBack } from "react-icons/io5";
 export const BackBar = () => {
   return (
     <div>
-      <Link href={"/movies"} className="absolute left-0 right-0 top-0 gap-4  p-4 lg:px-16 lg:py-8 py-4  flex items-center bg-dark-300 text-white  w-full z-[9999] ">
+      <Link href={"/movie"} className="absolute left-0 right-0 top-0 gap-4  p-4 lg:px-16 lg:py-8 py-4  flex items-center bg-dark-300 text-white  w-full z-[9999] ">
         <span className="text-3xl">
           <IoArrowBack/>
         </span>

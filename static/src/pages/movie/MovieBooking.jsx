@@ -1,8 +1,8 @@
-import {BackBar} from "../components/movieBooking/BackBar.jsx";
-import {BookSelectLocation} from "../components/movieBooking/BookSelectLocation.jsx";
-import {BookSelectCinema} from "../components/movieBooking/BookSelectCinema.jsx";
-import {BottomBarCover} from "../components/movieBooking/BottomBarCover.jsx";
-import {LocationDropdown} from "../components/cinemas/LocationDropdown.jsx";
+import {BackBar} from "../../components/movieBooking/BackBar.jsx";
+import {BookSelectLocation} from "../../components/movieBooking/BookSelectLocation.jsx";
+import {BookSelectCinema} from "../../components/movieBooking/BookSelectCinema.jsx";
+import {BottomBarCover} from "../../components/movieBooking/BottomBarCover.jsx";
+import {LocationDropdown} from "../../components/cinemas/LocationDropdown.jsx";
 
 export function MovieBooking() {
   return (

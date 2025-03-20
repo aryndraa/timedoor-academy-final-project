@@ -20,7 +20,7 @@ export const Navigation = () => {
     },
     {
       name: "Movies",
-      path: "/movies",
+      path: "/movie",
       icon: <MdMovieFilter />,
     },
     {

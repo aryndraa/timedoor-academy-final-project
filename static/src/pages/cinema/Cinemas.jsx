@@ -1,6 +1,6 @@
-import {SectionTitle} from "../components/SectionTitle.jsx";
-import {LocationDropdown} from "../components/cinemas/LocationDropdown.jsx";
-import {CinemaCard} from "../components/cards/CinemaCard.jsx";
+import {SectionTitle} from "../../components/SectionTitle.jsx";
+import {LocationDropdown} from "../../components/cinemas/LocationDropdown.jsx";
+import {CinemaCard} from "../../components/cards/CinemaCard.jsx";
 
 export function Cinemas() {
 

@@ -20,7 +20,7 @@ export const Navbar = () => {
     },
     {
       name: "Movies",
-      path: "/movies",
+      path: "/movie",
       icon: <MdMovieFilter />,
     },
     {

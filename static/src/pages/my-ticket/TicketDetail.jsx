@@ -1,6 +1,6 @@
-import {MovieWidget} from "../components/ticketDetail/MovieWidget.jsx";
-import {TicketCode} from "../components/ticketDetail/TicketCode.jsx";
-import {SeatsBooked} from "../components/ticketDetail/SeatsBooked.jsx";
+import {MovieWidget} from "../../components/ticketDetail/MovieWidget.jsx";
+import {TicketCode} from "../../components/ticketDetail/TicketCode.jsx";
+import {SeatsBooked} from "../../components/ticketDetail/SeatsBooked.jsx";
 
 export function TicketDetail() {
   return (

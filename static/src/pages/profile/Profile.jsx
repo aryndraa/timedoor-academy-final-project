@@ -1,7 +1,7 @@
-import {ProfileLayout} from "../layouts/ProfileLayout.jsx";
-import {SectionTitle} from "../components/SectionTitle.jsx";
-import {ProfileForm} from "../components/profile/ProfileForm.jsx";
-import {ContactForm} from "../components/profile/ContactForm.jsx";
+import {ProfileLayout} from "../../layouts/ProfileLayout.jsx";
+import {SectionTitle} from "../../components/SectionTitle.jsx";
+import {ProfileForm} from "../../components/profile/ProfileForm.jsx";
+import {ContactForm} from "../../components/profile/ContactForm.jsx";
 
 export function Profile() {
   return (

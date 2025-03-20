@@ -25,7 +25,7 @@ export function Home() {
       <section className="mb-6 lg:mb-12 mx-3 lg:mx-20  lg:pb-12 lg:border-b border-border/40">
         <div className="flex justify-between items-center">
           <SectionTitle title="Now Playings"/>
-          <Link to="/movies" className="text-primary lg:hidden">See more</Link>
+          <Link to="/movie/Movies" className="text-primary lg:hidden">See more</Link>
         </div>
         <div className="flex overflow-scroll lg:overflow-hidden lg:grid grid-cols-5 gap-2 lg:gap-6 gap-y-6 lg:gap-y-12 mt-4 lg:mt-8">
           <MovieCard/>
@@ -37,20 +37,20 @@ export function Home() {
           <MovieCard/>
           <MovieCard/>
           <MovieCard/>
-          <ViewMoreCard link={"/movies/"}/>
+          <ViewMoreCard link={"/movie/"}/>
         </div>
       </section>
       <section className="mb-6 lg:mb-12 mx-3 lg:mx-20 pb-12">
         <div className="flex justify-between items-center ">
           <SectionTitle title="Upcoming Movies"/>
-          <Link to="/movies" className="text-primary lg:hidden">See more</Link>
+          <Link to="/movie/Movies" className="text-primary lg:hidden">See more</Link>
         </div>
         <div className="flex overflow-scroll lg:overflow-hidden lg:grid grid-cols-5 gap-2 lg:gap-6 gap-y-12 mt-4 lg:mt-8">
           <MovieCard/>
           <MovieCard/>
           <MovieCard/>
           <MovieCard/>
-          <ViewMoreCard link={"/movies/upcoming"}/>
+          <ViewMoreCard link={"/movie/upcoming"}/>
         </div>
       </section>
     </>

@@ -37,7 +37,7 @@ export function Home() {
           <MovieCard/>
           <MovieCard/>
           <MovieCard/>
-          <ViewMoreCard link={"/movies/"}/>
+          <ViewMoreCard link={"/movie/"}/>
         </div>
       </section>
       <section className="mb-6 lg:mb-12 mx-3 lg:mx-20 pb-12">
@@ -50,7 +50,7 @@ export function Home() {
           <MovieCard/>
           <MovieCard/>
           <MovieCard/>
-          <ViewMoreCard link={"/movies/upcoming"}/>
+          <ViewMoreCard link={"/movie/upcoming"}/>
         </div>
       </section>
     </>

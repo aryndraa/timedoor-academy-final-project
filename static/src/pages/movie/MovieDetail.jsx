@@ -1,9 +1,9 @@
 import {Link} from "react-router-dom";
 import {IoArrowBack} from "react-icons/io5";
-import {MovieInfo} from "../components/movieDetail/MovieInfo.jsx";
-import {MovieSynopsis} from "../components/movieDetail/MovieSynopsis.jsx";
-import {MovieCasters} from "../components/movieDetail/MovieCasters.jsx";
-import {BottomBook} from "../components/movieDetail/BottomBook.jsx";
+import {MovieInfo} from "../../components/movieDetail/MovieInfo.jsx";
+import {MovieSynopsis} from "../../components/movieDetail/MovieSynopsis.jsx";
+import {MovieCasters} from "../../components/movieDetail/MovieCasters.jsx";
+import {BottomBook} from "../../components/movieDetail/BottomBook.jsx";
 
 export function MovieDetail() {
   return (
@@ -13,7 +13,7 @@ export function MovieDetail() {
         {/* Mobile View */}
         <div className="lg:hidden">
           <div className="lg:hidden">
-            <Link to={"/movies"}
+            <Link to={"/movie"}
                   className="absolute left-0 right-0 top-0  text-3xl p-4 py-8  flex bg-dark-300 text-white  w-full ">
               <IoArrowBack/>
             </Link>
@@ -51,7 +51,7 @@ export function MovieDetail() {
                  className="w-full h-[320px] object-cover mb-4 rounded-lg"
             />
             <div className="flex flex-col gap-4 w-full">
-              <Link to={"/movies/1/booking"}
+              <Link to={"/movie/1/booking"}
                     className="p-3 border rounded-lg bg-primary text-dark-300 font-semibold text-center border-primary w-full">Book
                 Now</Link>
               <Link to={"/"}

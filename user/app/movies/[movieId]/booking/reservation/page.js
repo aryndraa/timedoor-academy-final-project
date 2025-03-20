@@ -15,7 +15,7 @@ export default function Page () {
         <div className='mb-6'>
           <ReservationSeats/>
         </div>
-        <Link href={"/movies/1/booking/payment"} className='bg-primary flex justify-center w-full p-4 rounded-lg text-dark-300 font-bold text-lg '>Booking</Link>
+        <Link href={"/movie/1/booking/payment"} className='bg-primary flex justify-center w-full p-4 rounded-lg text-dark-300 font-bold text-lg '>Booking</Link>
       </div>
       <BottomBarCover/>
     </section>

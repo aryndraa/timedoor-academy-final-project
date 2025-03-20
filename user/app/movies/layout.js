@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <>
     {
-      pathname === '/movies' || pathname === "/movies/upcoming" ?
+      pathname === '/movie' || pathname === "/movie/upcoming" ?
       (
         <section className="min-h-[60vh] flex flex-col  py-8 lg:mx-16 pb-12 lg:pb-24">
           <div className=" mb-8 lg:mb-12 flex flex-col lg:flex-row-reverse lg:justify-between lg:items-center gap-6">
@@ -22,11 +22,11 @@ export default function RootLayout({ children }) {
              </Link>
            </div> 
            <div className="flex  gap-4 lg:gap-6">
-             <Link  href={"/movies"}  className={`font-medium lg:text-lg  border-b-2  pb-3 lg:pb-4  ${
-                 pathname === "/movies" ? "border-primary text-primary" : "border-transparent"
+             <Link  href={"/movie"}  className={`font-medium lg:text-lg  border-b-2  pb-3 lg:pb-4  ${
+                 pathname === "/movie" ? "border-primary text-primary" : "border-transparent"
                 }`}>Playing Now</Link>
-             <Link  href={"/movies/upcoming"} className={`font-medium lg:text-lg  border-b-2  pb-3 lg:pb-4 ${
-                 pathname === "/movies/upcoming" ? "border-primary text-primary" : "border-transparent"
+             <Link  href={"/movie/upcoming"} className={`font-medium lg:text-lg  border-b-2  pb-3 lg:pb-4 ${
+                 pathname === "/movie/upcoming" ? "border-primary text-primary" : "border-transparent"
                 }`}>Upcoming Movies</Link>
              </div>
               

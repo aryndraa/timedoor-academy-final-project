@@ -7,7 +7,7 @@ const allMovie = async () => {
     console.log(response.data)
     return response.data
   } catch (error) {
-    console.error("Error fetching movies:", error);
+    console.error("Error fetching movie:", error);
     return null;
   }
 }
@@ -19,7 +19,7 @@ const upcomingMovie = async () => {
     console.log(response.data)
     return response.data
   } catch (error) {
-    console.error("Error fetching movies:", error);
+    console.error("Error fetching movie:", error);
     return null;
   }
 }

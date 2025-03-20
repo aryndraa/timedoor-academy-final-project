@@ -1,34 +1,33 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { DefaultLayout } from "./layouts/DefaultLayout.jsx";
 import { Home } from "./pages/Home.jsx";
-import { MyTickets } from "./pages/MyTickets.jsx";
-import { Movies } from "./pages/Movies.jsx";
-import { UpcomingMovies } from "./pages/UpcomingMovies.jsx";
-import { Cinemas } from "./pages/Cinemas.jsx";
-import { Profile } from "./pages/Profile.jsx";
-import { ShoppingHistory } from "./pages/ShoppingHistory.jsx";
-import { EditProfile } from "./pages/EditProfile.jsx";
-import { TicketDetail } from "./pages/TicketDetail.jsx";
-import { MovieDetail } from "./pages/MovieDetail.jsx";
-import { MovieBooking } from "./pages/MovieBooking.jsx";
-import { MovieReservation } from "./pages/MovieReservation.jsx";
-import { MoviePayment } from "./pages/MoviePayment.jsx";
-import { Register } from "./pages/Register.jsx";
+import { MyTickets } from "./pages/my-ticket/MyTickets.jsx";
+import { Movies } from "./pages/movie/Movies.jsx";
+import { UpcomingMovies } from "./pages/movie/UpcomingMovies.jsx";
+import { Cinemas } from "./pages/cinema/Cinemas.jsx";
+import { Profile } from "./pages/profile/Profile.jsx";
+import { ShoppingHistory } from "./pages/profile/ShoppingHistory.jsx";
+import { EditProfile } from "./pages/profile/EditProfile.jsx";
+import { TicketDetail } from "./pages/my-ticket/TicketDetail.jsx";
+import { MovieDetail } from "./pages/movie/MovieDetail.jsx";
+import { MovieBooking } from "./pages/movie/MovieBooking.jsx";
+import { MovieReservation } from "./pages/movie/MovieReservation.jsx";
+import { MoviePayment } from "./pages/movie/MoviePayment.jsx";
+import { Register } from "./pages/profile/Register.jsx";
 import AuthMiddleware from "./middleware/AuthMiddleware.jsx";
-import {Login} from "./pages/Login.jsx";
-import auth from "./api/auth.js";
+import {Login} from "./pages/profile/Login.jsx";
 
 function App() {
-  const hasLogin = auth.checkLoginStatus();
+  const hasLogin = true;
 
   return (
     <BrowserRouter>
       <AuthMiddleware isAuth={hasLogin} excludeRoutes={[
         "/",
         "/my-tickets",
-        "/movies",
-        "/movies/upcoming",
-        "/movies/:id",
+        "/movie",
+        "/movie/upcoming",
+        "/movie/:id",
         "/cinemas",
         "/register",
         "/login"

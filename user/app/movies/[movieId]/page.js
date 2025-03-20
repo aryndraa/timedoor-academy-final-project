@@ -18,7 +18,7 @@ export default function Page ()  {
         {/* Mobile View */}
         <div className="lg:hidden">
           <div className="lg:hidden">
-            <Link href={"/movies"} className="absolute left-0 right-0 top-0  text-3xl p-4 py-8  flex bg-gradient-to-b from-dark-300 to-dark-300/0 text-white  w-full ">
+            <Link href={"/movie"} className="absolute left-0 right-0 top-0  text-3xl p-4 py-8  flex bg-gradient-to-b from-dark-300 to-dark-300/0 text-white  w-full ">
                 <IoArrowBack/>
             </Link>
           </div>
@@ -55,7 +55,7 @@ export default function Page ()  {
                  className="w-full h-[320px] object-cover mb-4 rounded-lg"
             />
             <div className="flex flex-col gap-4 w-full">
-             <Link href={"/movies/1/booking"} className="p-3 border rounded-lg bg-primary text-dark-300 font-semibold text-center border-primary w-full">Book Now</Link>
+             <Link href={"/movie/1/booking"} className="p-3 border rounded-lg bg-primary text-dark-300 font-semibold text-center border-primary w-full">Book Now</Link>
              <Link href={"/"} className="p-3 border rounded-lg border-primary w-full text-primary font-medium  text-center">Watch Trailer </Link>
             </div>
           </div>
