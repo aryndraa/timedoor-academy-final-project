@@ -12,6 +12,6 @@ class Studio extends Model
     ];
 
     public function cinema(): HasMany {
-        return $this->hasMany(Cinema::class);
+        return $this->hasMany(CinemaStudio::class);
     }
 }

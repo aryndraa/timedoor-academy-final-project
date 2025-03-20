@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background: #212224;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.rdp-root {
+  --rdp-accent-color: red; /* Use blue as the accent color. */
+}
+
+[data-theme="dark"] .rdp-root {
+  --rdp-accent-color: yellow; /* Use yellow as the accent color in dark mode. */
+}
+
+.rdp-today:not(.rdp-outside) {
+  color: #EABB40 !important;
+}
+
+.rdp-selected .rdp-day_button {
+  border-color: #EABB40 !important;
+  background-color: #EABB40 !important;
+  color: #fff !important;
+}
+
+.rdp-chevron {
+  fill:  #EABB40 !important;
+}
+
+.rdp-month_grid {
+  min-width: 30rem !important;
+}
+
+@media (max-width: 768px) {
+  .rdp-month_grid {
+    min-width:100%!important;
+  }
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: #fff !important;
+  background: #EABB40 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 20px 22px !important;
+  font-size: 12px !important;
+  border-radius: 50% ;
+}
+
+
+.swiper-button-prev:after, .swiper-button-next:after {
+  font-size: 1.2rem !important;
+  font-weight: 800;
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  left: -42% !important;
+}
+
+@media (max-width: 768px) {
+  .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    left: 0% !important;
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    display: none !important;
+  }
+}
+
+.swiper-pagination-bullet {
+  background: #fff !important;
+}

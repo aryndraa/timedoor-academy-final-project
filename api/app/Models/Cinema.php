@@ -18,7 +18,7 @@ class Cinema extends Model
     ];
 
     public function studio(): HasMany {
-        return $this->hasMany(Studio::class);
+        return $this->hasMany(CinemaStudio::class);
     }
 
     public function picture():MorphOne {

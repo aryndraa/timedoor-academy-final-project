@@ -15,6 +15,17 @@ class MovieController extends Controller
     public function index() {
         $movies = Movie::query()
             ->with(['cover'])
+            ->where('start_date', '<=', now()->format('Y-m-d'))
+            ->get();
+
+
+        return IndexMovieResource::collection($movies);
+    }
+
+    public function upcoming() {
+        $movies = Movie::query()
+            ->with(['cover'])
+            ->where('start_date', ">", now()->format('Y-m-d'))
             ->get();
 
         return IndexMovieResource::collection($movies);
