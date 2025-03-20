@@ -1,6 +1,3 @@
-import {useEffect, useState} from "react";
-import auth from "../../api/auth.js";
-import profile from "../../api/profile.js";
 import {Link} from "react-router-dom";
 import {MdEdit} from "react-icons/md";
 import {FaUser} from "react-icons/fa";
@@ -8,25 +5,6 @@ import {RoraTier} from "./RoraTier.jsx";
 import {RoraPoint} from "./RoraPoint.jsx";
 
 export const ProfileWidget = () => {
-  const [userData, setUserData] = useState(null);
-  const authorized = auth.checkLoginStatus();
-
-  useEffect(() => {
-    const fetchProfile = async () => {
-      const data = await profile.guestProfile();
-      console.log(data);
-      if (data) {
-        setUserData(data);
-      }
-    };
-
-    fetchProfile();
-  }, []);
-
-  // Pastikan userData sudah ada sebelum merender bagian yang membutuhkannya
-  if (!userData) {
-    return <div className="text-center text-text-400">Loading...</div>;
-  }
 
   return (
     <div className="bg-dark-250 p-4 lg:p-6 flex flex-col relative rounded-lg">
@@ -45,9 +23,9 @@ export const ProfileWidget = () => {
         </div>
         <div>
           <h1 className="lg:text-lg mb-0.5 font-medium leading-[1.5]">
-            {userData.first_name} {userData.last_name}
+            Mahendra Arya
           </h1>
-          <p className="text-xs text-text-400">{userData.email}</p>
+          <p className="text-xs text-text-400">aryacoder1102@gmail.com</p>
         </div>
       </Link>
       <div className="grid grid-cols-2 gap-4 lg:flex flex-col lg:gap-8">
