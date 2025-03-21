@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 export const Logo = () => {
   return (
-    <Link href={"/"} className="flex items-center gap-2 lg:gap-3 ">
+    <Link href={"/"} className="flex items-center gap-2 lg:gap-3 pr-12 border-r border-border/40">
       <img
         src={logo}
         alt="logo"
