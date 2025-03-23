@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "pabrik gula",
+    "genre": "horror",
+    "age_restriction": "21",
+    "duration": "134",
+    "language": "id",
+    "synopsis": "Endah, Fadhil, Dwi, Hendra, Wati, Ningsih, dan Franky berangkat bersama puluhan orang lainnya ke sebuah pabrik gula untuk menjadi buruh musiman. Setiap tahun pabrik gula mempekerjakan orang-orang dari desa sekitar untuk mempercepat proses penggilingan tebu di musim panen. Awalnya semua berjalan wajar tanpa keanehan, sampai suatu malam, Endah terbangun dan keluar dari mes/loji tempatnya menginap demi membuntuti sosok misterius. Sejak kejadian malam itu, para buruh mulai mengalami teror yang terus meningkat, mulai dari kecelakaan kerja yang menimpa salah satu dari mereka, sampai tewasnya seorang buruh secara mengenaskan di sumur belakang. Kemudian terungkap bahwa pabrik tersebut berdampingan dengan kerajaan demit, sesuatu telah membuat para demit marah sehingga sekarang mereka menuntut nyawa para buruh.",
+    "playing_now": true,
+    "cover": "https://i.pinimg.com/736x/41/09/2d/41092dbeb31960ca334b95f55948ae50.jpg",
+    "trailer_url": "https://youtu.be/O76onpa-A7Y?si=JsNZOueI4waaF0lN",
+    "casters": [
+      {
+        "name": "Arbani Yasiz",
+        "picture": "https://3.bp.blogspot.com/-9z5eExugd9Q/WIYjckPqOpI/AAAAAAAAGy0/qMOQaAalxDM1nwJOrVgKP_pP6yx50RcDgCLcB/s1600/_arb2.jpg"
+      },
+      {
+        "name": "Ersya Aurelia",
+        "picture": "https://cdn.idntimes.com/content-images/post/20191020/51003694-133480617696899-218870814637354674-n-421dc8060c655677aaaaf699ec3b7a53.jpg"
+      },
+      {
+        "name": "Erika Carlina",
+        "picture": "https://parboaboa.com/data/foto_berita/erika-carlina.webp"
+      },
+      {
+        "name": "Bukie B. Mansyur",
+        "picture": "https://cdn.idntimes.com/content-images/community/2022/09/244169349-272958098013141-6373343606231407992-n-da8d38c789b465218f295612fb813f37-1a9c55e7c992791a1eb4842b8d91c98a.jpg"
+      }
+    ]
+  }
+]
