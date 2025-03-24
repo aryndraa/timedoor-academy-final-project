@@ -18,7 +18,7 @@ import AuthMiddleware from "./middleware/AuthMiddleware.jsx";
 import {Login} from "./pages/profile/Login.jsx";
 
 function App() {
-  const hasLogin = false;
+  const hasLogin = true;
 
   return (
     <BrowserRouter>

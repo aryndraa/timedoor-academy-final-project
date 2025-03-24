@@ -14,6 +14,7 @@ export function UpcomingMovies() {
             .map((movie) => (
               <MovieCard
                 key={movie.id} 
+                id={String(movie.id)}
                 age={movie.age_restriction}
                 cover={movie.cover}
                 duration={movie.duration}

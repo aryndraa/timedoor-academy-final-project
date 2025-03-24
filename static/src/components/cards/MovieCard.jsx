@@ -1,9 +1,9 @@
 import { FaRegClock } from "react-icons/fa";
 import {Link} from "react-router-dom";
 
-export const MovieCard = ({duration, cover, age, title}) => {
+export const MovieCard = ({duration, cover, age, title, id}) => {
   return (
-    <Link to={"/movie/1"} >
+    <Link to={`/movies/${id}`} >
       <div className="relative mb-3 ">
         <img
           src={cover ?? "https://i.pinimg.com/736x/de/9a/e7/de9ae780aae37dbf947a56ad63ffd956.jpg"}

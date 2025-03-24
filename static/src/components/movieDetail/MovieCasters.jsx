@@ -4,7 +4,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import {CasterCard} from "../cards/CasterCard.jsx";
 
-export const MovieCasters = () => {
+export const MovieCasters = ({casters = []}) => {
   return (
     <div>
       <h2 className="text-xl font-medium mb-4">Casters</h2>
@@ -17,11 +17,14 @@ export const MovieCasters = () => {
           1024: { slidesPerView: 4.5 },
         }}
       >
-        <SwiperSlide><CasterCard /></SwiperSlide>
-        <SwiperSlide><CasterCard /></SwiperSlide>
-        <SwiperSlide><CasterCard /></SwiperSlide>
-        <SwiperSlide><CasterCard /></SwiperSlide>
-        <SwiperSlide><CasterCard /></SwiperSlide>
+        {casters.map((caster) => (
+          <SwiperSlide>
+            <CasterCard 
+              name={caster.name}
+              picture={caster.picture}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

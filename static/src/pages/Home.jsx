@@ -49,6 +49,7 @@ export function Home() {
           {movies.slice(0, 9).map((movie) => (
             <MovieCard 
               key={movie.id}
+              id={String(movie.id)}
               age={movie.age_restriction}
               cover={movie.cover}
               title={movie.title}
@@ -69,6 +70,7 @@ export function Home() {
             .map((movie) => (
               <MovieCard
                 key={movie.id} 
+                id={movie.id}
                 age={movie.age_restriction}
                 cover={movie.cover}
                 duration={movie.duration}
