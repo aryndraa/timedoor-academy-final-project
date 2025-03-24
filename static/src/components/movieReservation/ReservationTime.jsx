@@ -3,11 +3,11 @@ import { DateSelect } from "./DateSelect";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { HoursSelect } from "./HoursSelect";
+import { useReservation } from "../../contexts/ReservationContext";
 
 export const ReservationTime = () => {
   const [dates, setDates] = useState([]);
-  const [selectedDate, setSelectedDate] = useState(null);
-  const [selectedHour, setSelectedHour] = useState(null);
+  const { date, setDate, time, setTime } = useReservation(); 
   const hours = ["14:00", "16:00", "18:00"]; // Daftar jam tayang
 
   // Fungsi untuk mendapatkan tanggal dalam 1 minggu ke depan
@@ -27,10 +27,11 @@ export const ReservationTime = () => {
       }
 
       setDates(nextWeekDates);
-      setSelectedDate(nextWeekDates[0].fullDate); // Pilihan default: tanggal pertama
+      setDate(nextWeekDates[0].fullDate); // Pilihan default: tanggal pertama
     };
 
     getNextWeekDates();
+
   }, []);
 
   return (
@@ -44,11 +45,11 @@ export const ReservationTime = () => {
             1024: { slidesPerView: 4.2 },
           }}
         >
-          {dates.map((date, index) => (
-            <SwiperSlide key={index} onClick={() => setSelectedDate(date.fullDate)}>
+          {dates.map((dat, index) => (
+            <SwiperSlide key={index} onClick={() => setDate(dat.fullDate)}>
               <DateSelect
-                date={date}
-                isSelected={selectedDate === date.fullDate} 
+                date={dat}
+                isSelected={date === dat.fullDate} 
               />
             </SwiperSlide>
           ))}
@@ -60,8 +61,8 @@ export const ReservationTime = () => {
           <HoursSelect
             key={index}
             hour={hour}
-            isSelected={selectedHour === hour} 
-            onClick={() => setSelectedHour(hour)}
+            isSelected={time === hour} 
+            onClick={() => setTime(hour)}
           />
         ))}
       </div>

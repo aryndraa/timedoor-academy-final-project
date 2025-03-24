@@ -17,6 +17,7 @@ import { Register } from "./pages/profile/Register.jsx";
 import AuthMiddleware from "./middleware/AuthMiddleware.jsx";
 import {Login} from "./pages/profile/Login.jsx";
 import { AuthProvider} from "./contexts/AuthContext.jsx";
+import { ReservationProvider } from "./contexts/ReservationContext.jsx";
 
 
 function App() {
@@ -37,9 +38,27 @@ function App() {
                 <Route path="" element={<Movies />} />
                 <Route path="upcoming" element={<UpcomingMovies />} />
                 <Route path=":id" element={<MovieDetail />} />
+                
                 <Route path=":id/booking" element={<MovieBooking />} />
-                <Route path=":id/booking/:cinemaId/reservation" element={<MovieReservation />} />
-                <Route path=":id/booking/payment" element={<MoviePayment />} />
+
+              <Route path=":id/booking/:cinemaId/reservation" element={
+                <ReservationProvider>
+                  <MovieReservation />
+                </ReservationProvider>
+              } />
+
+              <Route
+                  path=":id/booking/*"
+                  element={
+                    <ReservationProvider>
+                      <Routes>
+                        <Route path="" element={<MovieBooking />} />
+                        <Route path=":cinemaId/reservation" element={<MovieReservation />} />
+                        <Route path="payment" element={<MoviePayment />} />
+                      </Routes>
+                    </ReservationProvider>
+                  }
+                />
               </Route>
       
               

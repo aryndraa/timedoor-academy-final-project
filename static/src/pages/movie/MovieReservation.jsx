@@ -5,11 +5,17 @@ import {ReservationSeats} from "../../components/movieReservation/ReservationSea
 import cinemas from "./../../data/cinemas.json"
 import movies from "./../../data/movies.json";
 import {ReservationTime} from "../../components/movieReservation/ReservationTime.jsx";
+import { useReservation } from "../../contexts/ReservationContext.jsx";
 
 export function MovieReservation() {
   const {id, cinemaId} = useParams()
+  const {setMovie, setCinema} = useReservation()
+
   const movie = movies.find((movie) => movie.id === parseInt(id));
+  setMovie(movie.title)
+
   const cinema = cinemas.find((cinema) => cinema.id === parseInt(cinemaId));
+  setCinema(cinema.name)
 
   return (
     <>
@@ -28,9 +34,10 @@ export function MovieReservation() {
             studios={cinema.studio}
             />
           </div>
-          <Link to={"/movie/1/booking/payment"}
-                className='bg-primary flex justify-center w-full p-4 rounded-lg text-dark-300 font-bold text-lg '>Booking</Link>
+          <Link to={"/movies/1/booking/payment"}
+                className='bg-primary flex justify-center w-full p-4 rounded-lg text-dark-300 font-bold text-lg '> Booking</Link>
         </div>
+
         <BottomBarCover/>
       </section>
 

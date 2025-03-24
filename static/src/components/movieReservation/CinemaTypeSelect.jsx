@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import { useReservation } from "../../contexts/ReservationContext";
 
 export const CinemaTypeSelect = ({ studios }) => {
   const [isOpen, setIsOpen] = useState(false); 
-  const [selectedStudio, setSelectedStudio] = useState("Select Cinema"); 
+  const {studio, setStudio} = useReservation(); 
 
   const toggleDropdown = () => setIsOpen(!isOpen);
   const handleSelect = (studio) => {
-    setSelectedStudio(studio);
+    setStudio(studio);
     setIsOpen(false); 
   };
 
@@ -17,7 +18,7 @@ export const CinemaTypeSelect = ({ studios }) => {
         onClick={toggleDropdown} 
         className="bg-primary flex w-full justify-between py-3 items-center text-dark-300 px-4 font-bold rounded-lg"
       >
-        {selectedStudio} 
+        {studio === "" ? "Select Studio" : studio} 
         <span className="bg-[#DAA61D] p-1 rounded-full transition-transform" style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}>
           <FaChevronDown />
         </span>

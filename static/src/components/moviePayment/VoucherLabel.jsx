@@ -5,6 +5,7 @@ export const VoucherLabel = () => {
       <input
         placeholder="Gunakan Voucher"
         type="text"
+        value={"VOUCHERDISKON"}
         className="bg-transparent font-semibold placeholder:text-text-200 placeholder:text-lg   focus:outline-none"
       />
     </div>
