@@ -3,6 +3,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useAuth } from "../contexts/AuthContext";
 
 const schema = yup.object().shape({
   email: yup.string().email("Email tidak valid").required("Email wajib diisi"),
@@ -18,11 +19,27 @@ const LoginForm = () => {
     resolver: yupResolver(schema),
   });
 
+  const {setIsAuth, users, setUser} = useAuth()
+
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false); // Tambahkan state
+  const [errorMessage, setErrorMessage] = useState("");
 
   const submit = async (data) => {
     setIsSubmitting(true); 
+    setErrorMessage("");
+
+    const foundUser = users.find(user => user.email === data.email && user.password === data.password);
+
+    if (foundUser) {
+      setUser(foundUser);
+      setIsAuth(true);
+      navigate("/"); // Redirect ke halaman utama setelah login sukses
+    } else {
+      setErrorMessage("Email atau password salah");
+    }
+
+    setIsSubmitting(false);
   };
 
   return (
@@ -60,6 +77,7 @@ const LoginForm = () => {
       >
         {isSubmitting ? "Memproses..." : "Masuk"}
       </button>
+      {errorMessage && <p className="text-red-500 text-sm mb-3">{errorMessage}</p>}
     </form>
   );
 };

@@ -16,31 +16,17 @@ import { MoviePayment } from "./pages/movie/MoviePayment.jsx";
 import { Register } from "./pages/profile/Register.jsx";
 import AuthMiddleware from "./middleware/AuthMiddleware.jsx";
 import {Login} from "./pages/profile/Login.jsx";
-import { AuthProvider, useAuth } from "./contexts/AuthContext.jsx";
+import { AuthProvider} from "./contexts/AuthContext.jsx";
 
 function App() {
-
-  const {isAuth} = useAuth
-  
-  const hasLogin = isAuth;
 
   return (
     <AuthProvider>
       <BrowserRouter>
-        <AuthMiddleware isAuth={hasLogin} excludeRoutes={[
-          "/",
-          "/my-tickets",
-          "/movies",
-          "/movies/upcoming",
-          "/movies/:id",
-          "/cinemas",
-          "/register",
-          "/login"
-        ]}>
           <DefaultLayout>
             <Routes>
               <Route path="/" element={<Home />} />
-      
+    
               <Route path="my-tickets/*" >
                 <Route path="" element={<MyTickets />} />
                 <Route path=":id" element={<TicketDetail />} />
@@ -67,7 +53,6 @@ function App() {
               <Route path="/login" element={<Login />} />
             </Routes>
           </DefaultLayout>
-        </AuthMiddleware>
       </BrowserRouter>
     </AuthProvider>
   );

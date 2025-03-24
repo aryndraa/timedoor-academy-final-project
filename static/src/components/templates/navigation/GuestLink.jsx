@@ -7,6 +7,8 @@ export const GuestLink = () => {
 
   const {isAuth, user, userProfile} = useAuth()
 
+  console.log(isAuth)
+
   const [profile, setProfile] = useState();
 
   useEffect(() => {
