@@ -16,54 +16,60 @@ import { MoviePayment } from "./pages/movie/MoviePayment.jsx";
 import { Register } from "./pages/profile/Register.jsx";
 import AuthMiddleware from "./middleware/AuthMiddleware.jsx";
 import {Login} from "./pages/profile/Login.jsx";
+import { AuthProvider, useAuth } from "./contexts/AuthContext.jsx";
 
 function App() {
-  const hasLogin = true;
+
+  const {isAuth} = useAuth
+  
+  const hasLogin = isAuth;
 
   return (
-    <BrowserRouter>
-      <AuthMiddleware isAuth={hasLogin} excludeRoutes={[
-        "/",
-        "/my-tickets",
-        "/movies",
-        "/movies/upcoming",
-        "/movies/:id",
-        "/cinemas",
-        "/register",
-        "/login"
-      ]}>
-        <DefaultLayout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="my-tickets/*" >
-              <Route path="" element={<MyTickets />} />
-              <Route path=":id" element={<TicketDetail />} />
-            </Route>
-
-            <Route path="movies/*">
-              <Route path="" element={<Movies />} />
-              <Route path="upcoming" element={<UpcomingMovies />} />
-              <Route path=":id" element={<MovieDetail />} />
-              <Route path=":id/booking" element={<MovieBooking />} />
-              <Route path=":id/booking/reservation" element={<MovieReservation />} />
-              <Route path=":id/booking/payment" element={<MoviePayment />} />
-            </Route>
-
-            <Route path="/cinemas" element={<Cinemas />} />
-
-            <Route path="/profile/*">
-              <Route path="" element={<Profile />} />
-              <Route path="edit" element={<EditProfile />} />
-              <Route path="shopping-history" element={<ShoppingHistory />} />
-            </Route>
-
-            <Route path="/register" element={<Register />} />
-            <Route path="/login" element={<Login />} />
-            
-          </Routes>
-        </DefaultLayout>
-      </AuthMiddleware>
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <AuthMiddleware isAuth={hasLogin} excludeRoutes={[
+          "/",
+          "/my-tickets",
+          "/movies",
+          "/movies/upcoming",
+          "/movies/:id",
+          "/cinemas",
+          "/register",
+          "/login"
+        ]}>
+          <DefaultLayout>
+            <Routes>
+              <Route path="/" element={<Home />} />
+      
+              <Route path="my-tickets/*" >
+                <Route path="" element={<MyTickets />} />
+                <Route path=":id" element={<TicketDetail />} />
+              </Route>
+      
+              <Route path="movies/*">
+                <Route path="" element={<Movies />} />
+                <Route path="upcoming" element={<UpcomingMovies />} />
+                <Route path=":id" element={<MovieDetail />} />
+                <Route path=":id/booking" element={<MovieBooking />} />
+                <Route path=":id/booking/reservation" element={<MovieReservation />} />
+                <Route path=":id/booking/payment" element={<MoviePayment />} />
+              </Route>
+      
+              <Route path="/cinemas" element={<Cinemas />} />
+      
+              <Route path="/profile/*">
+                <Route path="" element={<Profile />} />
+                <Route path="edit" element={<EditProfile />} />
+                <Route path="shopping-history" element={<ShoppingHistory />} />
+              </Route>
+              
+              <Route path="/register" element={<Register />} />
+              <Route path="/login" element={<Login />} />
+            </Routes>
+          </DefaultLayout>
+        </AuthMiddleware>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 
