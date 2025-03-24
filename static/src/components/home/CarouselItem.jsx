@@ -7,7 +7,7 @@ export const CarouselItem = ({ cover, title, genre, synopsis, duration, trailerU
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="max-h-[70vh] flex">
+    <div className="max-h-[60vh] flex">
       <div className="hidden lg:flex flex-1 pl-20 max-w-[28rem] bg-gradient-to-r from-dark-300 to-dark-300/0 flex-col justify-center">
         <div className="mb-6 min-w-[29rem] z-10">
           <h1 className="text-3xl leading-[1.5] font-semibold mb-2 text-white">{title}</h1>
@@ -37,7 +37,7 @@ export const CarouselItem = ({ cover, title, genre, synopsis, duration, trailerU
             <button onClick={() => setIsOpen(false)} className="absolute top-3 right-3 text-white text-2xl">
               <FaTimes />
             </button>
-            <ReactPlayer url={trailerUrl} controls width="100%" height="400px" />
+            <ReactPlayer url={trailerUrl} controls width="100%" height="360px" />
           </div>
         </div>
       )}

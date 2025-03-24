@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "title": "pabrik gula",
+    "title": "PABRIK GULA",
     "genre": "horror",
-    "age_restriction": "21",
+    "age_restriction": "21+",
     "duration": "134",
-    "language": "id",
+    "language": "indonesia",
     "synopsis": "Endah, Fadhil, Dwi, Hendra, Wati, Ningsih, dan Franky berangkat bersama puluhan orang lainnya ke sebuah pabrik gula untuk menjadi buruh musiman. Setiap tahun pabrik gula mempekerjakan orang-orang dari desa sekitar untuk mempercepat proses penggilinga tebu di musim panen. Awalnya semua berjalan wajar tanpa keanehan, sampai suatu malam, Endah terbangun dan keluar dari mes/loji tempatnya menginap demi membuntuti sosok misterius. Sejak kejadian malam itu, para buruh mulai mengalami teror yang terus meningkat, mulai dari kecelakaan kerja yang menimpa salah satu dari mereka, sampai tewasnya seorang buruh secara mengenaskan di sumur belakang. Kemudian terungkap bahwa pabrik tersebut berdampingan dengan kerajaan demit, sesuatu telah membuat para demit marah sehingga sekarang mereka menuntut nyawa para buruh.",
     "playing_now": true,
     "cover": "https://i.pinimg.com/736x/41/09/2d/41092dbeb31960ca334b95f55948ae50.jpg",
@@ -26,6 +26,164 @@
       {
         "name": "Bukie B. Mansyur",
         "picture": "https://cdn.idntimes.com/content-images/community/2022/09/244169349-272958098013141-6373343606231407992-n-da8d38c789b465218f295612fb813f37-1a9c55e7c992791a1eb4842b8d91c98a.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "NE ZHA 2",
+    "genre": "animation",
+    "age_restriction": "SU",
+    "duration": "145",
+    "language": "mandarin",
+    "synopsis": "Setelah sambaran petir surgawi, meskipun Ne Zha dan Ao Bing selamat dengan menjadi Roh, mereka akan segera menghilang sepenuhnya. Taiyi berencana membangun kembali tubuh fana Ne Zha dan Ao Bing dengan Teratai Berharga Tujuh Warna. Namun, selama proses rekonstruksi, banyak rintangan muncul. Bagaimana nasib Ne Zha dan Ao Bing selanjutnya?",
+    "playing_now": true,
+    "cover": "https://i.pinimg.com/736x/3a/cf/eb/3acfeb3368e8936d168c586fdf1254d2.jpg",
+    "trailer_url": "https://youtu.be/nsXQijb0F4I?si=k_gaL96dcKqTjv1x",
+    "casters": [
+      {
+        "name": "Lu Yanting",
+        "picture": "https://www.themoviedb.org/t/p/original/omC4Nsf9wVyNj02wl7RS5MXeq42.jpg"
+      },
+      {
+        "name": "Han Mo",
+        "picture": "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/6Ueom0Y4pjIG9B6zjQlfIbgcGhH.jpg"
+      },
+      {
+        "name": "Zhang Jiaming",
+        "picture": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7iL4a5fYc2ZLqFtzgJXYJwzXl8x.jpg"
+      },
+      {
+        "name": "Lu Qi",
+        "picture": "https://console.kr-asia.com/wp-content/uploads/2018/05/luqi2.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "NORMA: ANTARA MERTUA DAN MENANTU",
+    "genre": "DRAMA ",
+    "age_restriction": "13+",
+    "duration": "134",
+    "language": "indonesia",
+    "synopsis": "Norma (Tissa Biani) yang pendiam dan pemalu merasa beruntung karena menikah dengan cinta pertamanya: Irfan (Yusuf Mahardika). Kehidupan pernikahan mereka berjalan bahagia, Irfan melimpahi Norma dengan cinta. Bahkan Irfan juga berbakti pada kedua orang tua Norma: Abdul (Rukman Rosadi) dan Rina (Wulan Guritno). Siapa sangka, di balik fasad sempurna Irfan, ternyata dirinya berselingkuh. Hati Norma hancur, keluarga besar pun hancur saat mengetahui Irfan nyatanya berselingkuh dengan Rina, ibu Norma sendiri. Norma patah hati, mencari jawaban mengapa semua ini terjadi pada dirinya.",
+    "playing_now": true,
+    "cover": "https://img.youtube.com/vi/A4OjstdB-ao/maxresdefault.jpg",
+    "trailer_url": "https://youtu.be/A4OjstdB-ao?si=3njMby5k0V0LsvCw",
+    "casters": [
+      {
+        "name": "Tissa Biani",
+        "picture": "https://img.okezone.com/content/2023/10/30/33/2910898/biodata-dan-agama-tissa-biani-aktris-cantik-yang-berseteru-dengan-fans-fuji-uNlHiAMHzo.jpg"
+      },
+      {
+        "name": "Yusuf Mahardika",
+        "picture": "https://cdn-2.tstatic.net/suryamalang/foto/bank/images/biodata-yusuf-mahardika.jpg"
+      },
+      {
+        "name": "Wulan Guritno",
+        "picture": "https://1.bp.blogspot.com/-jr77jzpV2A4/YKipb7r36bI/AAAAAAAAF9o/vPsgWKJxj884gzXtcmLKOcm7Mge-OIUwACLcBGAsYHQ/s1350/Biodata%2Bdan%2BProfil%2BWulan%2BGuritno.jpg"
+      },
+      {
+        "name": "Rukman Rosadi",
+        "picture": "https://images.cinefil.com/stars/1153090.webp"
+      },
+      {
+        "name": "Nunung",
+        "picture": "https://img.okezone.com/content/2025/03/11/33/3121328/nunung_srimulat-zq0O_large.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "SNOW WHITE",
+    "genre": "FANTASY",
+    "age_restriction": "13+",
+    "duration": "134",
+    "language": "english",
+    "synopsis": "“Disney’s Snow White,” sebuah film musikal live-action yang digarap ulang berdasarkan film klasik tahun 1937, akan tayang secara eksklusif di bioskop pada bulan Maret 2025. Dibintangi oleh Rachel Zegler (“West Side Story”) sebagai pemeran utama dan Gal Gadot (“Wonder Woman”) sebagai Ibu Tiri, sang Ratu Jahat, petualangan musikal penuh magis ini membawa kembali ke kisah yang tak lekang oleh waktu bersama karakter-karakter kesayangan, Bashful, Doc, Dopey, Grumpy, Happy, Sleepy, dan Sneezy.",
+    "playing_now": true,
+    "cover": "https://i.pinimg.com/736x/ab/06/5d/ab065d8d3796d2a3fb255f81b447a449.jpg",
+    "trailer_url": "https://youtu.be/iV46TJKL8cU?si=tM15RzEfOX-JoUOs",
+    "casters": [
+      {
+        "name": "Rachel Zegler",
+        "picture": "https://dw-wp-production.imgix.net/2025/03/Rachel-Zegler.jpg?w=1200&h=800&ixlib=react-9.10.0"
+      },
+      {
+        "name": "Gal Gadot",
+        "picture": "http://img4.wikia.nocookie.net/__cb20140118114403/wonderwoman/images/1/13/Gal_Gadot.jpg"
+      },
+      {
+        "name": "Andrew Burnap",
+        "picture": "https://s.yimg.com/ny/api/res/1.2/AFdo8U98LLO9cVLibNCqsA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD04Mjg-/https://media.zenfs.com/en/people_218/96667004363255b5ec50570975258245"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Captain America: Brave New World",
+    "genre": "ACTION",
+    "age_restriction": "13+",
+    "duration": "118",
+    "language": "english",
+    "synopsis": "Masa jabatan Steve Rogers sebagai Captain America telah berakhir dan Sam Wilson mengambil alih peran tersebut. Di akhir Avengers: Endgame, Steve memberikan perisainya kepada Sam yang saat itu masih belum yakin. Namun Captain America yang baru lebih dari siap untuk melangkah maju dan menjadi pahlawan super yang ikonik. Captain America: Brave New World akan menghadirkan tantangan dan petualangan baru bagi pemimpin baru.",
+    "playing_now": true,
+    "cover": "https://i.pinimg.com/736x/7d/b4/7a/7db47a4f2af662065b63d40b99128a9a.jpg",
+    "trailer_url": "https://youtu.be/1pHDWnXmK7Y?si=jRvSdGd7gFSg6Jti",
+    "casters": [
+      {
+        "name": "Anthony Mackie",
+        "picture": "https://tse4.mm.bing.net/th?id=OIP.y9xBo40BKzUEDwsTBgd0HgHaLH&pid=Api&P=0&h=180"
+      },
+      {
+        "name": "Harrison Ford",
+        "picture": "https://api.time.com/wp-content/uploads/2014/06/harrison-ford-injured-star-wars.jpg?quality=85&w=2600"
+      },
+      {
+        "name": "Danny Ramirez",
+        "picture": "https://www.themoviedb.org/t/p/original/zI3w5lx9b61tRtQdyyn4DWJ3RRj.jpg"
+      },
+      {
+        "name": "Shira Haas",
+        "picture": "https://m.media-amazon.com/images/M/MV5BMTQ5MTMxNjM0Ml5BMl5BanBnXkFtZTgwOTg0NjcxNDE@._V1_.jpg"
+      },
+      {
+        "name": "Tim Blake Nelson",
+        "picture": "https://tse4.mm.bing.net/th?id=OIP.xINjFWVJo3ApGwgcOXqLDwHaJ4&pid=Api&P=0&h=180"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "THE LAST SUPPER",
+    "genre": "DRAMA",
+    "age_restriction": "13+",
+    "duration": "114  ",
+    "language": "english",
+    "synopsis": "Para rasul Yesus berkumpul menjelang terjadinya peristiwa pengkhianatan. Rahasia-rahasia tersembunyi dan motivasi-motivasi terselubung mulai tersingkap hingga memunculkan konflik di antara mereka.",
+    "playing_now": true,
+    "cover": "https://i.pinimg.com/736x/56/74/7f/56747fb2a56ac76b5dda1d11b29162b2.jpg",
+    "trailer_url": "https://youtu.be/5CVj41dtkIA?si=h8dtwcdtRJfBKQp6",
+    "casters": [
+      {
+        "name": "Jamie Ward",
+        "picture": "https://m.media-amazon.com/images/M/MV5BMjNiNjI5MTAtZjUwZi00ZTZmLTg5NDktY2ZhYjI2NDg5OTFkXkEyXkFqcGdeQXVyMjY2MTc3MDc@._V1_.jpg"
+      },
+      { 
+        "name": "Robert Knepper",
+        "picture": "https://tse4.mm.bing.net/th?id=OIP.VVvrdtSrnp3GHht5ZNBMvQHaLH&pid=Api&P=0&h=180"
+      },
+      {
+        "name": "Henry Garrett",
+        "picture": "https://media1.popsugar-assets.com/files/thumbor/mAS2hmdv6Xon3LtH1fjMGwJsAL8/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2016/05/23/835/n/1922283/69c030bf175bae35_GettyImages-461054014/i/Henry-Garrett-King.jpg"
+      },
+      {
+        "name": "Shira Haas",
+        "picture": "https://m.media-amazon.com/images/M/MV5BMTQ5MTMxNjM0Ml5BMl5BanBnXkFtZTgwOTg0NjcxNDE@._V1_.jpg"
+      },
+      {
+        "name": " James Faulkner",
+        "picture": "https://tse1.mm.bing.net/th?id=OIP.I0RPMY_NTL7iXymsChiwSwHaJQ&pid=Api&P=0&h=180"
       }
     ]
   }
