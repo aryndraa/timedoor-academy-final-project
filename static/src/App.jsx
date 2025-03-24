@@ -18,6 +18,7 @@ import AuthMiddleware from "./middleware/AuthMiddleware.jsx";
 import {Login} from "./pages/profile/Login.jsx";
 import { AuthProvider} from "./contexts/AuthContext.jsx";
 
+
 function App() {
 
   return (
@@ -37,10 +38,11 @@ function App() {
                 <Route path="upcoming" element={<UpcomingMovies />} />
                 <Route path=":id" element={<MovieDetail />} />
                 <Route path=":id/booking" element={<MovieBooking />} />
-                <Route path=":id/booking/reservation" element={<MovieReservation />} />
+                <Route path=":id/booking/:cinemaId/reservation" element={<MovieReservation />} />
                 <Route path=":id/booking/payment" element={<MoviePayment />} />
               </Route>
       
+              
               <Route path="/cinemas" element={<Cinemas />} />
       
               <Route path="/profile/*">

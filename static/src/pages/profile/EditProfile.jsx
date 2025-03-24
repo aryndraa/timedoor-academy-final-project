@@ -8,7 +8,7 @@ export function EditProfile() {
   return (
     <>
       <section className="mx-3 mt-6">
-        <Link to="/profile/Profile" className="flex gap-2 mb-4 items-center text-xl">
+        <Link to="/profile/" className="flex gap-2 mb-4 items-center text-xl">
           <IoArrowBack className="text-2xl"/> Back
         </Link>
         <div className=" px-4 lg:px-8 py-6 bg-dark-250 w-full rounded-lg  ">

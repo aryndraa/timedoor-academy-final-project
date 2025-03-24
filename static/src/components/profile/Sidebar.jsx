@@ -21,9 +21,7 @@ export const Sidebar = () => {
           <h4 className=" lg:text-lg font-medium">Check My Vouchers</h4>
         </div>
       </Link>
-      <Link to={'/profile'} className="flex items-center gap-4 p-6 py-5 bg-dark-250 justify-center hover:bg-dark-200 transition ease-in-out rounded-lg ">
-        <h4 className="text-lg font-medium text-red-700">Sign Out</h4>
-      </Link>
+
     </div>
   )
 }

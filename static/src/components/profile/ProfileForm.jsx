@@ -1,6 +1,6 @@
 import {FaUser} from "react-icons/fa";
 
-export const ProfileForm = ({firstName, lastName}) => {
+export const ProfileForm = () => {
   return (
     <div className="mb-5 lg:mb-10 pb-5 lg:pb-10 border-b border-border/20">
       <h2 className="text-xl lg:text-2xl text-text-100 font-medium mb-4">Profile</h2>
@@ -10,7 +10,6 @@ export const ProfileForm = ({firstName, lastName}) => {
           <div className="p-6 w-fit bg-dark-100 text-4xl rounded-full">
             <FaUser/>
           </div>
-          <button className="px-4 py-3 font-medium  h-fit bg-dark-100 active:bg-dark-100/20 transition ease-in-out rounded-lg">Update Photo Profile</button>
         </div>
 
         <h3 className="text-text-400 text-sm lg:text-base">First Name</h3>

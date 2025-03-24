@@ -1,7 +1,11 @@
-export const HoursSelect = () => {
+export const HoursSelect = ({ hour, isSelected, onClick }) => {
   return (
-    <div className="bg-dark-100 px-4 py-2 font-semibold rounded-full text-sm">
-      <span>14.00</span>
-    </div>
-  )
-}
+    <button
+      onClick={onClick}
+      className={`px-4 py-2 rounded-lg font-semibold transition cursor-pointer 
+      ${isSelected ? "bg-primary text-dark-200" : "bg-dark-100 text-white"}`}
+    >
+      {hour}
+    </button>
+  );
+};

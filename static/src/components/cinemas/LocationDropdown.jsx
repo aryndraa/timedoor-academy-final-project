@@ -1,6 +1,6 @@
 import { FaLocationDot } from "react-icons/fa6";
-import { useState } from "react";
-
+import {  useState } from "react";
+import { useCinema } from "../../contexts/CinemaContext";
 export function LocationDropdown() {
   const locations = {
     singapore: ["Central Region"],
@@ -12,8 +12,8 @@ export function LocationDropdown() {
     malaysia: ["Kuala Lumpur"]
   };
 
-  const [country, setCountry] = useState("all");
-  const [province, setProvince] = useState("all");
+  const {country, setCountry} = useCinema();
+  const {province, setProvince} = useCinema();
   const [openSetCountry, setOpenSetCountry] = useState(false);
   const [openSetProvince, setOpenOpenSetProvince] = useState(false);
 
