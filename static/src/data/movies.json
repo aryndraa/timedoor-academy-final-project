@@ -434,5 +434,65 @@
         "picture": "https://images.mubicdn.net/images/cast_member/647275/cache-519564-1583279005/image-w856.jpg?size=800x"
       }
     ]
+  },
+  {
+    "id": 14,
+    "title": "PINJAM 100 THE MOVIE",
+    "genre": "DRAMA ",
+    "age_restriction": "13+",
+    "duration": "98",
+    "language": "indonesia",
+    "synopsis": "Himpitan ekonomi membuat dua sekawan Paris (Paris Pernandes) dan Jerstang (Jeremy Audry Immanuel Sihotang) nekat merantau ke Jakarta dari Binjai untuk mengadu nasib. Hiruk pikuk ibukota membuat mereka berpikir bahwa dengan mudahnya mereka akan mendapat pekerjaan dibanding di kampung mereka, Binjai. Namun malang tanpa mereka ketahui, keras nya Jakarta menjadi tantangan berat bagi mereka berdua. Dapatkah mereka bertahan hidup di ibukota?",
+    "playing_now": false,
+    "cover": "https://media.21cineplex.com/webcontent/gallery/pictures/174038346684330_287x421.jpg",
+    "trailer_url": "https://youtu.be/vpf7-ELcrsE?si=UYT7eDpKq1NOT_YH",
+    "casters": [
+      {
+        "name": "Paris Pernandes",
+        "picture": "https://s.yimg.com/ny/api/res/1.2/1Vivv1lYVyQDi1f__NX6NA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTEyODA-/https://media.zenfs.com/id/liputan6_hosted_772/7b1055e3be2e3d8cf2d8fa9c04d85863"
+      },
+      { 
+        "name": "Bambang Soesatyo",
+        "picture": "https://cdn-2.tstatic.net/tribunnews/foto/bank/images/bambang-soesatyo-saat-diskusi-bertajuk-mencari-solusi-permanen-atas-persoalan-papu.jpg"
+      },
+      {
+        "name": "Hansen Vendi Agus",
+        "picture": "https://kuyou.id/content/images/hansen-vendi-agus-20231017023915.jpg"
+      },
+      {
+        "name": "Siti Anggun",
+        "picture": "https://bulatin.com/wp-content/uploads/2022/12/Siti-Anggun-agama-768x959.jpg"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "PENGEPUNGAN DI BUKIT DURI",
+    "genre": "THRILLER  ",
+    "age_restriction": "17+",
+    "duration": "112",
+    "language": "indonesia",
+    "synopsis": "Edwin berjanji pada kakaknya sebelum meninggal untuk menemukan anak kakaknya yang hilang. Pencarian Edwin membawanya menjadi guru di SMA Duri, sekolah untuk anak-anak bermasalah. Di sana, Edwin menghadapi murid-murid paling beringas sambil mencari keponakannya. Ketika akhirnya ia menemukan sang keponakan, kerusuhan pecah di seluruh kota dan mereka terjebak di sekolah, melawan anak-anak brutal yang kini mengincar nyawa mereka.",
+    "playing_now": false,
+    "cover": "https://m.media-amazon.com/images/M/MV5BZDBiMDJhZWItODA5Yi00NTI2LWFmNDctMjIzNDBlNDliMGNlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "trailer_url": "https://youtu.be/OBbE4wK47ts?si=4Ag4Zcnwvt3y_zLZ",
+    "casters": [
+      {
+        "name": "Morgan Oey",
+        "picture": "https://tse1.mm.bing.net/th?id=OIP.oQer41oFtzCWXAq3wv5PwgHaHa&pid=Api&P=0&h=180"
+      },
+      { 
+        "name": "Omara Esteghlal",
+        "picture": "https://www.dailysia.com/wp-content/uploads/2021/12/Omara-Esteghlal.jpg"
+      },
+      {
+        "name": "Hana Pitrashata Malasan",
+        "picture": "https://cdn.idntimes.com/content-images/post/20230119/70226170-141122777145535-7392184490273136911-n-9486e538bb2541cef7bd3c0cfa78a7ea.jpg"
+      },
+      {
+        "name": "Endy Arfian",
+        "picture": "https://parboaboa.com/data/foto_berita/endy-arfian.webp"
+      }
+    ]
   }
 ]

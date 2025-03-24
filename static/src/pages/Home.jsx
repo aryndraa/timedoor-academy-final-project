@@ -64,10 +64,17 @@ export function Home() {
           <Link to="/movie/Movies" className="text-primary lg:hidden">See more</Link>
         </div>
         <div className="flex overflow-scroll lg:overflow-hidden lg:grid grid-cols-5 gap-2 lg:gap-6 gap-y-12 mt-4 lg:mt-8">
-          <MovieCard/>
-          <MovieCard/>
-          <MovieCard/>
-          <MovieCard/>
+        {movies
+            .filter((movie) => movie.playing_now === false) 
+            .map((movie) => (
+              <MovieCard
+                key={movie.id} 
+                age={movie.age_restriction}
+                cover={movie.cover}
+                duration={movie.duration}
+                title={movie.title}
+              />
+            ))}
           <ViewMoreCard link={"/movie/upcoming"}/>
         </div>
       </section>
