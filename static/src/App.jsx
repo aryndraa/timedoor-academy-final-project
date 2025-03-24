@@ -25,9 +25,9 @@ function App() {
       <AuthMiddleware isAuth={hasLogin} excludeRoutes={[
         "/",
         "/my-tickets",
-        "/movie",
-        "/movie/upcoming",
-        "/movie/:id",
+        "/movies",
+        "/movies/upcoming",
+        "/movies/:id",
         "/cinemas",
         "/register",
         "/login"

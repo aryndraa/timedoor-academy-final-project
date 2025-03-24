@@ -6,11 +6,11 @@ export const TabBar = () => {
   return (
     <div className="flex gap-4 lg:gap-6 text-text-400 text-base lg:text-lg font-medium">
       <Link to="/movies" className={`border-b  pb-3 ${
-        pathname === "/movie" ? "text-primary border-primary" : "border-border/40"
+        pathname === "/movies" ? "text-primary border-primary" : "border-border/40"
       }`}>Playing Now</Link>
 
       <Link to="/movies/upcoming" className={`border-b  pb-3 ${
-        pathname === "/movie/upcoming" ? "text-primary border-primary" : " border-border/40"
+        pathname === "/movies/upcoming" ? "text-primary border-primary" : " border-border/40"
       }`}>Upcoming Movies</Link>
     </div>
   )
