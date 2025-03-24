@@ -3,8 +3,13 @@ import { useState } from "react";
 
 export function LocationDropdown() {
   const locations = {
-    indonesia: ["bali", "jawa barat", "jawa tengah", "jawa timur"],
-    usa: ["california", "texas", "new york", "florida"],
+    singapore: ["Central Region"],
+    japan: ["Tokyo", "Kanagawa", "Saitama"],
+    indonesia: ["DKI Jakarta"],
+    vietnam: ["Hanoi", "Ho Chi Minh City"],
+    thailand: ["Bangkok"],
+    india: ["Maharashtra", "West Bengal", "Delhi"],
+    malaysia: ["Kuala Lumpur"]
   };
 
   const [country, setCountry] = useState("all");
@@ -28,12 +33,12 @@ export function LocationDropdown() {
           : "Pilih Lokasi"}
       </button>
 
-      <div className="absolute right-0 left-0 mt-2 p-2 pb-4 lg:p-0 bg-dark-300 lg:bg-transparent lg:mt-4 flex  flex-col lg:flex-row-reverse gap-2">
+      <div className="absolute right-0  mt-2  lg:p-2 w-full lg:w-fit bg-dark-250  lg:mt-4 flex  flex-col lg:flex-row-reverse gap-2">
         {
           openSetCountry ?
             <div>
               <h3 className="lg:hidden my-2 text-sm text-text-400">Select Country</h3>
-              <ul className="bg-dark-200 lg:bg-dark-250 rounded-lg h-fit   w-full lg:w-52 shadow-lg ">
+              <ul className="bg-dark-200 lg:bg-dark-250 rounded-lg h-fit   w-full lg:w-52 ">
                 {Object.keys(locations).map((flag) => (
                   <li key={flag}>
                     <button
@@ -56,7 +61,7 @@ export function LocationDropdown() {
         {openSetProvince ?
           <div>
             <h3 className="lg:hidden my-2 text-sm text-text-400">Select Province</h3>
-            <ul className="bg-dark-200 lg:bg-dark-250 rounded-lg w-full lg:w-52 shadow-lg">
+            <ul className="bg-dark-200 lg:bg-dark-250 rounded-lg w-full lg:w-52 ">
               {locations[country].map((provinceOption) => (
                 <li key={provinceOption}>
                   <button
@@ -76,8 +81,6 @@ export function LocationDropdown() {
           :
           ""
         }
-
-
       </div>
     </div>
   );
