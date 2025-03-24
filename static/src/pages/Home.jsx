@@ -5,8 +5,11 @@ import {CoverCard} from "../components/cards/CoverCard.jsx";
 import {MovieCard} from "../components/cards/MovieCard.jsx";
 import {ViewMoreCard} from "../components/cards/ViewMoreCard.jsx";
 import {Link} from "react-router-dom";
+import movies from "./../data/movies.json"
 
 export function Home() {
+
+
   return (
     <>
       <section className="mb-6 lg:mb-12 ">
@@ -43,15 +46,15 @@ export function Home() {
           <Link to="/movie/Movies" className="text-primary lg:hidden">See more</Link>
         </div>
         <div className="flex overflow-scroll lg:overflow-hidden lg:grid grid-cols-5 gap-2 lg:gap-6 gap-y-6 lg:gap-y-12 mt-4 lg:mt-8">
-          <MovieCard/>
-          <MovieCard/>
-          <MovieCard/>
-          <MovieCard/>
-          <MovieCard/>
-          <MovieCard/>
-          <MovieCard/>
-          <MovieCard/>
-          <MovieCard/>
+          {movies.slice(0, 9).map((movie) => (
+            <MovieCard 
+              key={movie.id}
+              age={movie.age_restriction}
+              cover={movie.cover}
+              title={movie.title}
+              duration={movie.duration}
+            />
+          ))}
           <ViewMoreCard link={"/movie/"}/>
         </div>
       </section>

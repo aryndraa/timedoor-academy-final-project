@@ -17,7 +17,7 @@ export const MovieCard = ({duration, cover, age, title}) => {
             <span><FaRegClock/></span>
             {duration ?? "60"} Minutes
           </p>
-          <span className="text-xs lg:text-base bg-dark-100 p-[3px] lg:px-2 rounded-lg">{age ?? "13"}+</span>
+          <span className="text-xs lg:text-base bg-dark-100 p-[3px] lg:px-2 rounded-lg">{age ?? "13"}</span>
         </div>
       </div>
     </Link>
