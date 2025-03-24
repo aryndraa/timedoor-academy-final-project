@@ -30,7 +30,7 @@ export const CinemaCard = ({picture, name, address, country, province, openingTi
             {
               studios.length > 0 ?
                 studios.map((studio, index) => (
-                  <span className="uppercase" key={index}>{studio.name}</span>
+                  <span className="uppercase font-medium" key={index}>{studio}</span>
                 ))
                 :
                 (
