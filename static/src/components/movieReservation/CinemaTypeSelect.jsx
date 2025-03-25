@@ -8,7 +8,7 @@ export const CinemaTypeSelect = ({ studios }) => {
 
   const toggleDropdown = () => setIsOpen(!isOpen);
   const handleSelect = (studio) => {
-    setStudio(studio);
+    setStudio(studio ?? "Reguler");
     setIsOpen(false); 
   };
 
@@ -18,7 +18,7 @@ export const CinemaTypeSelect = ({ studios }) => {
         onClick={toggleDropdown} 
         className="bg-primary flex w-full justify-between py-3 items-center text-dark-300 px-4 font-bold rounded-lg"
       >
-        {studio === "" ? "Select Studio" : studio} 
+        {studio === "" ? "Reguler" : studio} 
         <span className="bg-[#DAA61D] p-1 rounded-full transition-transform" style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}>
           <FaChevronDown />
         </span>

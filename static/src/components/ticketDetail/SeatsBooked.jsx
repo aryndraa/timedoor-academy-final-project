@@ -1,11 +1,13 @@
-export const SeatsBooked = () => {
+export const SeatsBooked = ({seats}) => {
   const totalSeats = 60;
   const seatsPerRow = 6;
 
-  const bookedSeats = [
-    { rows: "A", columns: 1 },
-    { rows: "A", columns: 2 },
-  ];
+  const bookedSeats = seats.map(seat => {
+    return {
+      rows: seat.charAt(0),  
+      columns: parseInt(seat.slice(1)) 
+    };
+  });
 
   return (
     <div className="p-6 border border-border/20">
@@ -36,10 +38,6 @@ export const SeatsBooked = () => {
         <div className="flex gap-2 items-center text-sm">
           <span className="w-4 h-4 bg-primary block rounded-lg"></span>
           Booked
-        </div>
-        <div className="flex gap-2 items-center text-sm">
-          <span className="w-4 h-4 bg-dark-100 block rounded-lg"></span>
-          Available
         </div>
       </div>
     </div>
