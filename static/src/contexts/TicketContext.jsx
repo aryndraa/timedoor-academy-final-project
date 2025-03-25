@@ -2,7 +2,7 @@ import { createContext, useState, useContext } from "react";
 
 const TicketContext = createContext();
 
-export const CinemaProvider = ({ children }) => {
+export const TicketProvider = ({ children }) => {
   const [tickets, setTickets] = useState([
     {
       id: 1,
@@ -10,6 +10,7 @@ export const CinemaProvider = ({ children }) => {
       cinema: "MegaBox Coex Mall",
       date: "28-03-2025",
       time: "19:00",
+      studio: "reguler",
       seats: ["A1", "A2"]
     }
   ]);
@@ -25,4 +26,4 @@ export const CinemaProvider = ({ children }) => {
   );
 };
 
-export const useCinema = () => useContext(TicketContext);
+export const useTicket = () => useContext(TicketContext);

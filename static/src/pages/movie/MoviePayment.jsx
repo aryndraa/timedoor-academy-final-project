@@ -6,6 +6,8 @@ import {PricingPaymentDetail} from "../../components/moviePayment/PricingPayment
 import { useReservation } from "../../contexts/ReservationContext.jsx";
 import { useParams } from "react-router-dom";
 import movies from "./../../data/movies.json";
+import { useTicket } from "../../contexts/TicketContext.jsx";
+import { useState } from "react";
 
 export function MoviePayment() {
   const {movie, cinema, studio, date, time, seats} = useReservation()
@@ -13,6 +15,21 @@ export function MoviePayment() {
 
   const {id} = useParams()
   const movieN = movies.find((movie) => movie.id === parseInt(id));
+
+  const { addTicket } = useTicket()
+
+  const [newTicket, ] = useState({
+    movie: movie,
+    cinema: cinema,
+    date: date,
+    time: time,
+    seats: seats,
+    studio: studio
+  });
+
+  const handleAddTicket = () => {
+    addTicket(newTicket);
+  };
 
   return (
     <>
@@ -37,7 +54,7 @@ export function MoviePayment() {
           </div>
           <div className='flex-1'>
             <PricingPaymentDetail/>
-            <TicketPaymentButton/>
+            <TicketPaymentButton handleCLick={handleAddTicket}/>
           </div>
         </div>
 

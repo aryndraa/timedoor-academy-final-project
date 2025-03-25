@@ -3,7 +3,7 @@ import { FaChevronDown } from "react-icons/fa";
 
 export const ButtonPaymentMethod = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedMethod, setSelectedMethod] = useState("Select Payment");
+  const [selectedMethod, setSelectedMethod] = useState("Credit Card");
 
   const paymentMethods = ["Credit Card", "Bank Transfer", "E-Wallet", "PayPal"];
 

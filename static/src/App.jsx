@@ -18,63 +18,67 @@ import AuthMiddleware from "./middleware/AuthMiddleware.jsx";
 import {Login} from "./pages/profile/Login.jsx";
 import { AuthProvider} from "./contexts/AuthContext.jsx";
 import { ReservationProvider } from "./contexts/ReservationContext.jsx";
+import { TicketProvider } from "./contexts/TicketContext.jsx";
 
 
 function App() {
 
   return (
     <AuthProvider>
-      <BrowserRouter>
-          <DefaultLayout>
-            <Routes>
-              <Route path="/" element={<Home />} />
+      <TicketProvider>
+        <BrowserRouter>
+            <DefaultLayout>
+              <Routes>
+                <Route path="/" element={<Home />} />
+      
+                <Route path="my-tickets/*" >
+                  <Route path="" element={<MyTickets />} />
+                  <Route path=":id" element={<TicketDetail />} />
+                </Route>
+        
+                <Route path="movies/*">
+                  <Route path="" element={<Movies />} />
+                  <Route path="upcoming" element={<UpcomingMovies />} />
+                  <Route path=":id" element={<MovieDetail />} />
+                  
+                  <Route path=":id/booking" element={<MovieBooking />} />
     
-              <Route path="my-tickets/*" >
-                <Route path="" element={<MyTickets />} />
-                <Route path=":id" element={<TicketDetail />} />
-              </Route>
-      
-              <Route path="movies/*">
-                <Route path="" element={<Movies />} />
-                <Route path="upcoming" element={<UpcomingMovies />} />
-                <Route path=":id" element={<MovieDetail />} />
-                
-                <Route path=":id/booking" element={<MovieBooking />} />
+                <Route path=":id/booking/:cinemaId/reservation" element={
+                  <ReservationProvider>
+                    <MovieReservation />
+                  </ReservationProvider>
+                } />
+  
+                <Route
+                    path=":id/booking/*"
+                    element={
+                      <ReservationProvider>
+                        <Routes>
+                          <Route path="" element={<MovieBooking />} />
+                          <Route path=":cinemaId/reservation" element={<MovieReservation />} />
+                          <Route path="payment" element={<MoviePayment />} />
+                        </Routes>
+                      </ReservationProvider>
+                    }
+                  />
+                </Route>
+                  
+                  
+                <Route path="/cinemas" element={<Cinemas />} />
+                  
+                <Route path="/profile/*">
+                  <Route path="" element={<Profile />} />
+                  <Route path="edit" element={<EditProfile />} />
+                  <Route path="shopping-history" element={<ShoppingHistory />} />
+                </Route>
+                  
+                <Route path="/register" element={<Register />} />
+                <Route path="/login" element={<Login />} />
+              </Routes>
+            </DefaultLayout>
+        </BrowserRouter>
+      </TicketProvider>
 
-              <Route path=":id/booking/:cinemaId/reservation" element={
-                <ReservationProvider>
-                  <MovieReservation />
-                </ReservationProvider>
-              } />
-
-              <Route
-                  path=":id/booking/*"
-                  element={
-                    <ReservationProvider>
-                      <Routes>
-                        <Route path="" element={<MovieBooking />} />
-                        <Route path=":cinemaId/reservation" element={<MovieReservation />} />
-                        <Route path="payment" element={<MoviePayment />} />
-                      </Routes>
-                    </ReservationProvider>
-                  }
-                />
-              </Route>
-      
-              
-              <Route path="/cinemas" element={<Cinemas />} />
-      
-              <Route path="/profile/*">
-                <Route path="" element={<Profile />} />
-                <Route path="edit" element={<EditProfile />} />
-                <Route path="shopping-history" element={<ShoppingHistory />} />
-              </Route>
-              
-              <Route path="/register" element={<Register />} />
-              <Route path="/login" element={<Login />} />
-            </Routes>
-          </DefaultLayout>
-      </BrowserRouter>
     </AuthProvider>
   );
 }
