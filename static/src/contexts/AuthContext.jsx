@@ -20,8 +20,8 @@ export const AuthProvider = ({children}) => {
     {
       id: 1,
       userId: 1,
-      firstName: "Mahendra",
-      lastName: "Arya",
+      firstName: "User",
+      lastName: "Testing",
       phone: "08123456789"
     }
   ])

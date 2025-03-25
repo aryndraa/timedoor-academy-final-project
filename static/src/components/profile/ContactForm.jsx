@@ -8,7 +8,7 @@ export const ContactForm = () => {
         <input
           type="text"
           className="w-full lg:w-[70%] col-span-2 px-4 p-3 bg-dark-200 text-border/40  border border-border/20 rounded-lg focus:outline-none cursor-not-allowed"
-          value="aryacoder1102@gmail.com"
+          value="user@test.com"
           disabled
         />
 
@@ -16,7 +16,7 @@ export const ContactForm = () => {
         <input
           type="text"
           className="w-full lg:w-[70%] col-span-2 px-4 p-3 bg-dark-200 text-border/40  border border-border/20 rounded-lg focus:outline-none cursor-not-allowed"
-          value="082144915822"
+          value="0812345678"
           disabled
         />
       </div>

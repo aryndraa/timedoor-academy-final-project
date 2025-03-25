@@ -41,7 +41,7 @@ export const GuestLink = () => {
           {profile?.firstName} {profile?.lastName}
         </h2>
         <p className="text-[11px] lg:text-xs text-white/80">
-          arycoder1102@gmail.com
+          user@test.com
         </p>
       </div>
       <div className="p-3 text-lg lg:text-xl bg-dark-100 text-white rounded-full">

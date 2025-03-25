@@ -15,13 +15,13 @@ export const ProfileForm = () => {
         <h3 className="text-text-400 text-sm lg:text-base">First Name</h3>
         <input type="text"
                className="w-full lg:w-[70%]  col-span-2 px-4 p-3  bg-transparent border border-border/20 rounded-lg focus:outline-none"
-               value={"Mahendra"}
+               value={"User"}
                required/>
 
         <h3 className="text-text-400 text-sm lg:text-base">Last Name</h3>
         <input type="text"
                className="w-full lg:w-[70%]  col-span-2 px-4 p-3  bg-transparent border border-border/20 rounded-lg focus:outline-none"
-                value={"Arya"}
+                value={"Testing"}
         />
       </div>
     </div>
