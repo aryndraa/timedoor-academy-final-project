@@ -10,15 +10,15 @@ export const BookSelectCinema = ({movieId}) => {
       {cinemas.map((cinema) => ( 
        <Link to={`/movies/${movieId}/booking/${cinema.id}/reservation`} className="p-4 bg-dark-200 rounded-lg">
         <div className="mb-6">
-          <h2 className="text-xl font-medium mb-2">{cinema.name}</h2>
-          <p className="text-sm text-text-400">{cinema.country} | {cinema.province} | {cinema.address}</p>
+          <h2 className="text-lg lg:text-xl font-medium mb-1 lg:mb-2">{cinema.name}</h2>
+          <p className="text-xs lg:text-sm text-text-400">{cinema.country} | {cinema.province} | {cinema.address}</p>
         </div>
         <div className="flex justify-between items-center">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 text-xs lg:text-base">
            <FaClock/>
            <p>{cinema.open_hours} - {cinema.close_hours}</p>
           </div>
-          <div className="self-end flex text-sm lg:text-base gap-3">
+          <div className="self-end flex text-xs lg:text-base gap-3">
             {
               cinema.studio.length > 0 ?
                 cinema.studio.map((studio, index) => (

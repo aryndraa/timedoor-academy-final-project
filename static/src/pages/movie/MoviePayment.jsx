@@ -31,7 +31,7 @@ export function MoviePayment() {
 
   const handleAddTicket = () => {
     addTicket(newTicket);
-    navigate("/")
+    navigate("/my-tickets")
   };
 
   return (
