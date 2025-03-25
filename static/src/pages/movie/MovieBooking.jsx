@@ -24,7 +24,7 @@ export function MovieBooking() {
           <div className="flex gap-2 flex-col lg:flex-row lg:items-center justify-between mb-8">
             <h2 className='text-xl  font-medium text-text-200 '>Select Cinema</h2>
           </div>
-          <BookSelectCinema/>
+          <BookSelectCinema movieId={movie.id}/>
         </div>
         <BottomBarCover/>
       </section>

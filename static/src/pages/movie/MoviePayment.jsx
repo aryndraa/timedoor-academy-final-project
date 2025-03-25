@@ -4,7 +4,7 @@ import {TicketPaymentButton} from "../../components/moviePayment/TicketPaymentBu
 import {TicketPaymentDetail} from "../../components/moviePayment/TicketPaymentDetail.jsx";
 import {PricingPaymentDetail} from "../../components/moviePayment/PricingPaymentDetail.jsx";
 import { useReservation } from "../../contexts/ReservationContext.jsx";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import movies from "./../../data/movies.json";
 import { useTicket } from "../../contexts/TicketContext.jsx";
 import { useState } from "react";
@@ -18,6 +18,8 @@ export function MoviePayment() {
 
   const { addTicket } = useTicket()
 
+  const navigate = useNavigate()
+
   const [newTicket, ] = useState({
     movie: movie,
     cinema: cinema,
@@ -29,6 +31,7 @@ export function MoviePayment() {
 
   const handleAddTicket = () => {
     addTicket(newTicket);
+    navigate("/")
   };
 
   return (

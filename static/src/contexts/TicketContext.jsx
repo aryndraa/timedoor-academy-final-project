@@ -12,7 +12,7 @@ export const TicketProvider = ({ children }) => {
       time: "19:00",
       studio: "reguler",
       seats: ["A1", "A2"]
-    }
+    },
   ]);
 
   const addTicket = (newTicket) => {

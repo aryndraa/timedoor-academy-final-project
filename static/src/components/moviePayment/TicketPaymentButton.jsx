@@ -6,7 +6,7 @@ export const TicketPaymentButton = ({handleCLick}) => {
       <ButtonPaymentMethod/>
       <button 
         className="w-full bg-primary p-4 text-dark-300 font-bold text-lg rounded-lg"
-        onClick={() => handleCLick}
+        onClick={handleCLick}
       >
         Booking Ticket
       </button>

@@ -117,7 +117,7 @@ export function MovieDetail() {
             </div>
           </div>
         </div>
-        <BottomBook />
+        <BottomBook  id={movie.id}/>
 
         {/* Modal Trailer */}
         {showTrailer && (

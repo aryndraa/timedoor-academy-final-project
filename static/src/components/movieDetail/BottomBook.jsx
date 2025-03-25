@@ -1,9 +1,9 @@
 import {Link} from "react-router-dom";
 
-export const BottomBook = () => {
+export const BottomBook = ({id}) => {
   return (
     <div className='fixed lg:hidden bottom-0 z-[60] p-5 text-center bg-dark-300 flex w-full left-0 right-0'>
-      <Link to={"/movie/1/booking"} className='p-3 bg-primary w-full text-dark-300 font-bold text-base rounded-lg '>
+      <Link to={`/movies/${id}/booking`} className='p-3 bg-primary w-full text-dark-300 font-bold text-base rounded-lg '>
         Book Ticket
       </Link>
     </div>

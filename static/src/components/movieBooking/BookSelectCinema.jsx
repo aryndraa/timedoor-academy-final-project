@@ -3,12 +3,12 @@ import {CinemaCard} from "../cards/CinemaCard.jsx";
 import cinemas from "./../../data/cinemas.json"
 import { Link } from "react-router-dom";
 
-export const BookSelectCinema = () => {
+export const BookSelectCinema = ({movieId}) => {
 
   return (
-    <Link to={"/movies/1/booking/1/reservation"} className='flex flex-col gap-3 lg:gap-4'>
+    <div className='flex flex-col gap-3 lg:gap-4'>
       {cinemas.map((cinema) => ( 
-       <div className="p-4 bg-dark-200 rounded-lg">
+       <Link to={`/movies/${movieId}/booking/${cinema.id}/reservation`} className="p-4 bg-dark-200 rounded-lg">
         <div className="mb-6">
           <h2 className="text-xl font-medium mb-2">{cinema.name}</h2>
           <p className="text-sm text-text-400">{cinema.country} | {cinema.province} | {cinema.address}</p>
@@ -36,8 +36,8 @@ export const BookSelectCinema = () => {
 
           </div>
         </div>
-       </div>
+       </Link>
       ))}
-    </Link>
+    </div>
   )
 }
